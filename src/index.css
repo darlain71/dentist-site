@@ -2031,8 +2031,14 @@ body {
   }
   
   .inner-page-container .services-section,
-  .inner-page-container .works-section {
-    padding-top: 1.5rem;
+  .inner-page-container .works-section,
+  .new-about-container .services-section,
+  .new-about-container .works-section {
+    padding-top: 0.5rem;
+  }
+  
+  .new-about-header {
+    margin-bottom: 1rem;
   }
   
   .nav-menu {
