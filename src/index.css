@@ -1986,3 +1986,96 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* --- Global Responsiveness Fixes --- */
+
+@media (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer-links-grid {
+    justify-content: flex-start;
+    gap: 3rem;
+    flex: 1;
+  }
+  .footer-left {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title, .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading {
+    font-size: 2.5rem !important;
+  }
+  .about-title, .services-title {
+    font-size: 2.5rem;
+  }
+  .testimonials-title, .cta-title {
+    font-size: 2.5rem;
+  }
+  .stats-number, .new-stat-number, .product-stats-number {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section, .about-section, .product-section, .services-section, .works-section, .testimonials-section, .new-about-container, .faq-section {
+    padding: 4rem 5%;
+  }
+  
+  .nav-menu {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem;
+  }
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-top-row, .product-bottom-row, .about-grid, .works-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .works-images-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-links-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-heading {
+    font-size: 1.8rem;
+  }
+  .footer-section {
+    padding: 3rem 5% 0 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title, .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading, .about-title, .testimonials-title, .cta-title, .services-title {
+    font-size: 2rem !important;
+  }
+  .stats-number, .new-stat-number, .product-stats-number {
+    font-size: 2rem;
+  }
+  .hero-content {
+    margin-top: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-subtext {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .book-appointment-btn {
+    align-self: center;
+  }
+  .tooth-icon-container {
+    width: 2rem;
+    height: 2.5rem;
+  }
+}
