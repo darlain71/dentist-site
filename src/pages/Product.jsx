@@ -4,8 +4,14 @@ import Testimonials from '../components/Testimonials';
 
 const Product = () => {
   return (
-    <div className="inner-page-container">
-
+    <div className="new-about-container">
+      <section className="new-about-header">
+        <h1 className="new-about-title">Dental Plans & Products</h1>
+        <p className="new-about-desc">
+          We offer a variety of plans tailored to your specific dental needs. 
+          Our products are designed to provide maximum value while ensuring top-tier dental health.
+        </p>
+      </section>
 
       <section className="works-section">
         <div className="works-grid">

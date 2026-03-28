@@ -4,13 +4,18 @@ import Testimonials from '../components/Testimonials';
 
 const Services = () => {
   return (
-    <div className="inner-page-container">
-
+    <div className="new-about-container">
+      <section className="new-about-header">
+        <h1 className="new-about-title">Services</h1>
+        <p className="new-about-desc">
+          We offer a full spectrum of dental services designed to keep your smile healthy and bright, 
+          from routine checkups to specialized surgery.
+        </p>
+      </section>
 
       <section className="services-section">
         <div className="services-header">
           <h2 className="services-title">Services We Provide</h2>
-
         </div>
 
         <div className="works-grid" style={{ marginTop: '1.5rem' }}>
