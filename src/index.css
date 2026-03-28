@@ -2054,7 +2054,7 @@ body {
 
   .product-top-row, .product-bottom-row, .about-grid, .works-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3.5rem;
   }
   .testimonial-card {
     flex: 0 0 100%;
