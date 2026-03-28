@@ -143,7 +143,7 @@ const Home = () => {
           </div>
 
           <div className="works-col-right">
-            <h2 className="works-title">Services We Provide<br />Are Listed Below</h2>
+            <h2 className="works-title" style={{ marginBottom: '4rem' }}>Services We Provide<br />Are Listed Below</h2>
 
             <div className="works-images-grid">
               <div className="work-card">
