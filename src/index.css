@@ -2033,9 +2033,13 @@ body {
     display: none;
   }
 
-  .product-top-row, .product-bottom-row, .about-grid, .works-grid, .testimonials-grid {
+  .product-top-row, .product-bottom-row, .about-grid, .works-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .testimonial-card {
+    flex: 0 0 100%;
+    padding: 2rem 1.5rem;
   }
   .works-images-grid {
     display: grid;
@@ -2044,8 +2048,9 @@ body {
   }
   
   .footer-links-grid {
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
   }
   .footer-heading {
     font-size: 1.8rem;

@@ -42,9 +42,24 @@ const Testimonials = () => {
   ];
 
   const [testOffset, setTestOffset] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(typeof window !== 'undefined' && window.innerWidth <= 768 ? 1 : 3);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setCardsToShow(window.innerWidth <= 768 ? 1 : 3);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  React.useEffect(() => {
+    if (testOffset > testimonialsData.length - cardsToShow) {
+      setTestOffset(Math.max(0, testimonialsData.length - cardsToShow));
+    }
+  }, [cardsToShow, testOffset, testimonialsData.length]);
 
   const nextTestimonial = () => {
-    if (testOffset < testimonialsData.length - 3) {
+    if (testOffset < testimonialsData.length - cardsToShow) {
       setTestOffset(prev => prev + 1);
     }
   };
@@ -66,7 +81,7 @@ const Testimonials = () => {
           <button className="nav-btn nav-btn-left" onClick={prevTestimonial} disabled={testOffset === 0} style={{ opacity: testOffset === 0 ? 0.3 : 1 }}>
             <ArrowLeft size={20} className="nav-icon arrow-left" />
           </button>
-          <button className="nav-btn nav-btn-right" onClick={nextTestimonial} disabled={testOffset >= testimonialsData.length - 3} style={{ opacity: testOffset >= testimonialsData.length - 3 ? 0.3 : 1 }}>
+          <button className="nav-btn nav-btn-right" onClick={nextTestimonial} disabled={testOffset >= testimonialsData.length - cardsToShow} style={{ opacity: testOffset >= testimonialsData.length - cardsToShow ? 0.3 : 1 }}>
             <ArrowRight size={20} className="nav-icon arrow-right" />
           </button>
         </div>
@@ -75,7 +90,7 @@ const Testimonials = () => {
       <div className="testimonials-carousel-container">
         <div
           className="testimonials-grid"
-          style={{ transform: `translateX(calc(-${testOffset * (100 / 3)}% - ${testOffset * (2.5 / 3)}rem))` }}
+          style={{ transform: `translateX(calc(-${testOffset * (100 / cardsToShow)}% - ${testOffset * (2.5 / cardsToShow)}rem))` }}
         >
           {testimonialsData.map((t, idx) => (
             <div className="testimonial-card" key={idx}>
