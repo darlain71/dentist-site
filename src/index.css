@@ -173,7 +173,7 @@ body {
 }
 
 .hero-title {
-  font-size: 6rem;
+  font-size: 7.5rem;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.04em;
@@ -2005,7 +2005,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-title, .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading {
+  .hero-title {
+    font-size: 4.5rem !important;
+  }
+  .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading {
     font-size: 2.5rem !important;
   }
   .about-title, .services-title {
@@ -2049,8 +2052,8 @@ body {
   
   .footer-links-grid {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 4rem;
   }
   .footer-heading {
     font-size: 1.8rem;
@@ -2061,14 +2064,18 @@ body {
 }
 
 @media (max-width: 576px) {
-  .hero-title, .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading, .about-title, .testimonials-title, .cta-title, .services-title {
+  .hero-title {
+    font-size: 4rem !important;
+  }
+  .inner-hero-title, .bravio-hero-title, .works-title, .new-about-title, .product-heading, .about-title, .testimonials-title, .cta-title, .services-title {
     font-size: 2rem !important;
   }
   .stats-number, .new-stat-number, .product-stats-number {
     font-size: 2rem;
   }
   .hero-content {
-    margin-top: 2rem;
+    margin-top: 8rem;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
