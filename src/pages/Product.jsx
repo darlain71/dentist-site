@@ -19,7 +19,7 @@ const Product = () => {
           </div>
         </div>
 
-        <div className="works-grid" style={{ marginTop: '4rem' }}>
+        <div className="works-grid" style={{ marginTop: '1.5rem' }}>
           <div className="works-col-left">
             <h2 className="works-title">Featured Products</h2>
             <p className="works-desc">High-quality dental products for your health.</p>

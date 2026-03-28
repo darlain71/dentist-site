@@ -13,7 +13,7 @@ const Services = () => {
 
         </div>
 
-        <div className="works-grid" style={{ marginTop: '4rem' }}>
+        <div className="works-grid" style={{ marginTop: '1.5rem' }}>
           <div className="works-col-left">
             <h2 className="works-title"></h2>
             <p className="works-desc">We offer a full spectrum of dental services designed to keep your smile healthy and bright.</p>

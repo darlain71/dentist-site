@@ -2027,7 +2027,12 @@ body {
   }
   
   .hero-section, .about-section, .product-section, .services-section, .works-section, .testimonials-section, .new-about-container, .faq-section {
-    padding: 4rem 5%;
+    padding: 2.5rem 5% 4rem 5%;
+  }
+  
+  .inner-page-container .services-section,
+  .inner-page-container .works-section {
+    padding-top: 1.5rem;
   }
   
   .nav-menu {
@@ -2059,6 +2064,13 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     gap: 4rem;
+  }
+  
+  .services-header {
+    margin-bottom: 1.5rem;
+  }
+  .works-title {
+    margin-bottom: 1rem;
   }
   .footer-heading {
     font-size: 1.8rem;
