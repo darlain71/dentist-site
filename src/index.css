@@ -2067,10 +2067,14 @@ body {
   }
   
   .services-header {
-    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  .works-section > .works-grid:first-child {
+    margin-top: 4rem;
   }
   .works-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   .footer-heading {
     font-size: 1.8rem;
