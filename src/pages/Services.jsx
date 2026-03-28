@@ -10,17 +10,13 @@ const Services = () => {
       <section className="services-section">
         <div className="services-header">
           <h2 className="services-title">Services We Provide</h2>
-          <div className="services-header-right">
-            <p className="services-desc">
-              We offer a full spectrum of dental services designed to keep your smile healthy and bright.
-            </p>
-          </div>
+
         </div>
 
         <div className="works-grid" style={{ marginTop: '4rem' }}>
           <div className="works-col-left">
             <h2 className="works-title"></h2>
-            <p className="works-desc">Comprehensive care for all your dental needs.</p>
+            <p className="works-desc">We offer a full spectrum of dental services designed to keep your smile healthy and bright.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid">
