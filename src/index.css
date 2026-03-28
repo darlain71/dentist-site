@@ -1869,7 +1869,11 @@ body {
 @media (max-width: 992px) {
   .new-about-header, .new-about-mission-section {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+  }
+  .new-about-header {
+    margin-top: 4rem;
+    gap: 0.5rem;
   }
   .new-about-stats {
     grid-template-columns: repeat(2, 1fr);
