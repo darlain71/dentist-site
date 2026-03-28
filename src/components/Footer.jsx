@@ -10,7 +10,7 @@ const Footer = () => {
             <h3 className="footer-heading">Contact & Location</h3>
             <div className="footer-contact-info">
               <p>442 oxford Street, AK-039-5028<br />Accra,</p>
-              <p style={{ marginTop: '1rem' }}>Phone: (233) 123-4567<br />Email: hello@lifepath.com</p>
+              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:+2331234567" style={{ color: 'inherit', textDecoration: 'none' }}>(233) 123-4567</a><br />Email: hello@lifepath.com</p>
             </div>
             <div className="footer-email-line"></div>
           </div>

@@ -5,10 +5,7 @@ import Testimonials from '../components/Testimonials';
 const Services = () => {
   return (
     <div className="inner-page-container">
-      <section className="inner-page-hero">
-        <h1 className="inner-hero-title">Our Dental Services</h1>
-        <p className="inner-hero-subtext">Professional care from routine checkups to specialized surgery.</p>
-      </section>
+
 
       <section className="services-section">
         <div className="services-header">

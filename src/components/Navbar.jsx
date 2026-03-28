@@ -36,10 +36,10 @@ const Navbar = () => {
         <Link to="/services" className={`nav-link ${isServices ? 'active' : ''}`}>Services</Link>
       </nav>
 
-      <button className="call-now-btn">
+      <a href="tel:+2331234567" className="call-now-btn">
         <Phone className="btn-icon" size={16} />
         <span>Call Now</span>
-      </button>
+      </a>
 
       <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
         <Menu size={28} />
@@ -54,10 +54,10 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/product" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Product</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          <button className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
+          <a href="tel:+2331234567" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <Phone className="btn-icon" size={16} />
             <span>Call Now</span>
-          </button>
+          </a>
         </div>
       )}
     </header>
