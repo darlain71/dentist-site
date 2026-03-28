@@ -5,27 +5,24 @@ import Testimonials from '../components/Testimonials';
 const Product = () => {
   return (
     <div className="inner-page-container">
-      <section className="inner-page-hero">
-        <h1 className="inner-hero-title">Dental Plans & Products</h1>
-        <p className="inner-hero-subtext">Transparent, accessible, and high-quality care options.</p>
-      </section>
-      
+
+
       <section className="works-section">
         <div className="works-grid">
           <div className="works-col-left">
             <h2 className="works-title">Comprehensive Coverage</h2>
             <p className="about-desc">
-              We offer a variety of plans tailored to your specific dental needs. 
+              We offer a variety of plans tailored to your specific dental needs.
               Our products are designed to provide maximum value while ensuring
               top-tier dental health.
             </p>
           </div>
         </div>
 
-        <div className="works-grid" style={{marginTop: '4rem'}}>
+        <div className="works-grid" style={{ marginTop: '4rem' }}>
           <div className="works-col-left">
-             <h2 className="works-title">Featured Products</h2>
-             <p className="works-desc">High-quality dental products for your health.</p>
+            <h2 className="works-title">Featured Products</h2>
+            <p className="works-desc">High-quality dental products for your health.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid">
