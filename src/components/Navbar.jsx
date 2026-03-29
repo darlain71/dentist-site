@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''} ${!isHome ? 'inner-header' : ''}`}>
-      <Link to="/" className="logo">LifePath</Link>
+      <Link to="/" className="logo">LifeDent</Link>
 
       <nav className="nav-menu">
         <Link to="/" className={`nav-link ${isHome && !location.hash ? 'active' : ''}`}>Home</Link>
@@ -36,10 +36,15 @@ const Navbar = () => {
         <Link to="/services" className={`nav-link ${isServices ? 'active' : ''}`}>Services</Link>
       </nav>
 
-      <a href="tel:+2331234567" className="call-now-btn">
-        <Phone className="btn-icon" size={16} />
-        <span>Call Now</span>
-      </a>
+      <div className="nav-contact" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <a href="tel:0248632660" className="call-now-btn" style={{ padding: '0.65rem 1rem' }}>
+          <Phone className="btn-icon" size={16} />
+          <span>Call to Book</span>
+        </a>
+        <a href="tel:0554532013" className="call-now-btn" style={{ padding: '0.65rem 1rem', display: 'none' }} id="mobile-only-second-phone">
+          <Phone className="btn-icon" size={16} />
+        </a>
+      </div>
 
       <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
         <Menu size={28} />
@@ -54,9 +59,13 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/product" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Product</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-          <a href="tel:+2331234567" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
+          <a href="tel:0248632660" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <Phone className="btn-icon" size={16} />
-            <span>Call Now</span>
+            <span>024 8632 660</span>
+          </a>
+          <a href="tel:0554532013" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)} style={{ marginTop: '0.5rem' }}>
+            <Phone className="btn-icon" size={16} />
+            <span>055 453 2013</span>
           </a>
         </div>
       )}

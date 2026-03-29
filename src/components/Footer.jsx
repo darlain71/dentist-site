@@ -7,18 +7,18 @@ const Footer = () => {
       <footer className="footer-section">
         <div className="footer-top">
           <div className="footer-left">
-            <h3 className="footer-heading">Contact & Location</h3>
+            <h3 className="footer-heading">Contact & Locations</h3>
             <div className="footer-contact-info">
-              <p>442 oxford Street, AK-039-5028<br />Accra,</p>
-              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:+2331234567" style={{ color: 'inherit', textDecoration: 'none' }}>(233) 123-4567</a><br />Email: hello@lifepath.com</p>
+              <p><strong>East Legon Clinic:</strong><br />Accra, Ghana</p>
+              <p style={{ marginTop: '0.5rem' }}><strong>Oyarifa Clinic:</strong><br />Accra, Ghana</p>
+              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a> / <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a><br />Email: info@lifedent.com</p>
             </div>
             <div className="footer-email-line"></div>
           </div>
           <div className="footer-links-grid">
             <ul className="footer-links-col">
-              <li><a href="#home">Home</a></li>
-              <li><a href="/about">About LifePath</a></li>
-              <li><a href="/product">Product</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
               <li><a href="/services">Services</a></li>
             </ul>
 
@@ -27,12 +27,15 @@ const Footer = () => {
               <li><a href="#instagram">Instagram</a></li>
               <li><a href="#whatsapp">WhatsApp</a></li>
               <li><a href="#linkedin">LinkedIn</a></li>
-              <li><a href="#youtube">Youtube</a></li>
+              <li><a href="#tiktok">TikTok</a></li>
             </ul>
           </div>
         </div>
-        <div className="footer-bottom">
-          <h1 className="footer-huge-text">LifePath</h1>
+        <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h1 className="footer-huge-text" style={{ fontSize: '10vw' }}>LifeDent</h1>
+          <p style={{ marginTop: '2rem', paddingBottom: '2rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
+            &copy; {new Date().getFullYear()} LifeDent. All Rights Reserved.
+          </p>
         </div>
       </footer>
     </div>

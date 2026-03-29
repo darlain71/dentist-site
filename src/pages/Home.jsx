@@ -1,33 +1,49 @@
 import React, { useState } from 'react';
-import { Phone, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Phone, ArrowRight, ArrowLeft, Star, MapPin, Award } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Dental Signature GH | Best Dentist in East Legon Accra</title>
+        <meta name="description" content="Friendly, professional, and affordable dental care in East Legon and Oyarifa, Accra. Book an appointment today!" />
+      </Helmet>
       <div className="hero-section" id="home">
         <div className="hero-background"></div>
 
         <main className="hero-content">
           <h1 className="hero-title">
-            <span className="title-row">Seamless</span>
-            <span className="title-row">
-              Dental
-
-              Care
-            </span>
+            <span className="title-row">Your Brightest</span>
+            <span className="title-row">Smile Awaits</span>
           </h1>
 
           <p className="hero-subtext">
-            Whether it's a routine checkup or a major dental emergency,<br />
-            our experienced professionals are just a call away
+            Friendly, professional, and affordable dental care for the whole family.<br />
+            Visit our clinics in East Legon and Oyarifa, Accra.
           </p>
 
-          <button className="book-appointment-btn">
-            <span>Book Appointment</span>
+          <a href="tel:0248632660" className="book-appointment-btn" style={{ textDecoration: 'none' }}>
+            <span>Book an Appointment</span>
             <ArrowRight className="btn-icon" size={18} />
-          </button>
+          </a>
+
+          <div className="trust-signals" style={{ display: 'flex', gap: '2rem', marginTop: '3rem', flexWrap: 'wrap' }}>
+            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
+              <Star size={20} color="#d4a373" />
+              <span style={{ fontWeight: 500 }}>10+ Years Experience</span>
+            </div>
+            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
+              <MapPin size={20} color="#d4a373" />
+              <span style={{ fontWeight: 500 }}>East Legon & Oyarifa</span>
+            </div>
+            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
+              <Award size={20} color="#d4a373" />
+              <span style={{ fontWeight: 500 }}>Certified Specialists</span>
+            </div>
+          </div>
         </main>
       </div>
 
@@ -44,10 +60,10 @@ const Home = () => {
               to create comfortable and welcoming environment for each and<br />
               every patient. We offer a wide range of services.
             </p>
-            <button className="about-btn">
+            <a href="tel:0248632660" className="about-btn" style={{ textDecoration: 'none' }}>
               <span>Book Appointment</span>
               <ArrowRight className="btn-icon" size={16} />
-            </button>
+            </a>
             <div className="about-img-center-wrapper">
               <img src="/about_center.png" alt="Dental procedure close-up" className="about-img-center" />
             </div>
@@ -63,52 +79,47 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section" id="product">
-        <div className="product-container">
-          <div className="product-top-row">
-            <div className="product-info-left">
-              <h2 className="product-heading">
-                Doctor Consultations<br />
-                Are Free & Trusted
-              </h2>
-              <p className="product-subtext-left">
-                Team carefully evaluates your results to provide actionable<br />
-                insights for improving your health & lifespan.
-              </p>
-            </div>
-
-            <div className="product-image-center">
-              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental consultation" className="product-img-main" />
-            </div>
-
-            <div className="product-cta-right">
-              <p className="product-desc-right">
-                Take control of your health with a comprehensive<br />
-                assessment unlike any other. We use the latest medical<br />
-                innovations, including next-generation MRI,<br />
-                cardiovascular & neurocognitive assessments, early<br />
-                cancer detection, and genetic testing.
-              </p>
-              <button className="product-btn about-btn">
-                <span>Book Appointment</span>
-                <ArrowRight className="btn-icon" size={18} />
-              </button>
-            </div>
+      <section className="product-section" id="gallery" style={{ backgroundColor: '#faf8f5' }}>
+        <div className="product-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+              Real Results, Real Smiles
+            </h2>
+            <p className="product-subtext-left" style={{ color: '#666' }}>
+              See the difference our professional dental care makes. From teeth whitening to <br />
+              complete smile makeovers, our results speak for themselves.
+            </p>
           </div>
 
-          <div className="product-bottom-row">
-            <div className="product-video-wrapper">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Medical procedure" className="product-img-video" />
-              <div className="video-play-btn">
-                <svg viewBox="0 0 24 24" fill="white" className="play-icon">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+          <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Teeth Whitening Before and After" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Professional Teeth Whitening</h3>
+                <p style={{ color: '#666', fontSize: '0.95rem' }}>A brighter, more confident smile in just one session.</p>
               </div>
             </div>
-
-            <div className="product-extra-image">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Patient care" className="product-img-extra" />
+            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental Care" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Complete Check-ups</h3>
+                <p style={{ color: '#666', fontSize: '0.95rem' }}>Comprehensive exams tracking your oral health over time.</p>
+              </div>
             </div>
+            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Dental Surgery" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Advanced Procedures</h3>
+                <p style={{ color: '#666', fontSize: '0.95rem' }}>Safe, comfortable, and effective treatments.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+             <a href="tel:0248632660" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+                <span>Book Your Consultation</span>
+                <ArrowRight className="btn-icon" size={16} />
+              </a>
           </div>
         </div>
       </section>
@@ -123,10 +134,10 @@ const Home = () => {
                 welcoming environment for each.
               </p>
 
-              <button className="works-btn black-btn">
+              <a href="tel:0248632660" className="works-btn black-btn" style={{ textDecoration: 'none' }}>
                 <span>Book Appointment</span>
                 <ArrowRight className="btn-icon" size={16} />
-              </button>
+              </a>
             </div>
 
             <div className="works-avatars-container">

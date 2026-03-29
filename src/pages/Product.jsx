@@ -10,6 +10,7 @@ const Product = () => {
         <p className="new-about-desc">
           We offer a variety of plans tailored to your specific dental needs. 
           Our products are designed to provide maximum value while ensuring top-tier dental health.
+          Whether you are looking for preventative maintenance, advanced cosmetic procedures, or comprehensive family plans, we have a solution for you. We believe everyone deserves access to high-quality dental care that fits their lifestyle and budget.
         </p>
       </section>
 
