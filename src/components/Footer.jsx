@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <h1 className="footer-huge-text" style={{ fontSize: '3rem', margin: '1rem 0 0 0' }}>LifeDent</h1>
-          <p style={{ marginTop: '0.5rem', paddingBottom: '2rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
+          <h1 className="footer-huge-text" style={{ fontSize: '2rem', margin: '0' }}>LifeDent</h1>
+          <p style={{ margin: '0', paddingBottom: '1rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
             &copy; {new Date().getFullYear()} LifeDent. All Rights Reserved.
           </p>
         </div>
