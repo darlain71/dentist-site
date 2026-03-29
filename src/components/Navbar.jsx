@@ -61,11 +61,7 @@ const Navbar = () => {
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <a href="tel:0248632660" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <Phone className="btn-icon" size={16} />
-            <span>024 8632 660</span>
-          </a>
-          <a href="tel:0554532013" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)} style={{ marginTop: '0.5rem' }}>
-            <Phone className="btn-icon" size={16} />
-            <span>055 453 2013</span>
+            <span>Call to Book</span>
           </a>
         </div>
       )}
