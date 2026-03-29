@@ -30,21 +30,25 @@ const Home = () => {
             <ArrowRight className="btn-icon" size={18} />
           </a>
 
-          <div className="trust-signals" style={{ display: 'flex', gap: '2rem', marginTop: '3rem', flexWrap: 'wrap' }}>
-            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-              <Star size={20} color="#d4a373" />
-              <span style={{ fontWeight: 500 }}>10+ Years Experience</span>
-            </div>
-            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-              <MapPin size={20} color="#d4a373" />
-              <span style={{ fontWeight: 500 }}>East Legon & Oyarifa</span>
-            </div>
-            <div className="signal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.9)' }}>
-              <Award size={20} color="#d4a373" />
-              <span style={{ fontWeight: 500 }}>Certified Specialists</span>
-            </div>
-          </div>
         </main>
+      </div>
+
+      {/* Horizontal Trust Banner */}
+      <div className="trust-banner">
+        <div className="trust-banner-inner">
+          <div className="signal">
+            <Star size={24} color="#d4a373" />
+            <span>10+ Years Experience</span>
+          </div>
+          <div className="signal">
+            <MapPin size={24} color="#d4a373" />
+            <span>East Legon & Oyarifa</span>
+          </div>
+          <div className="signal">
+            <Award size={24} color="#d4a373" />
+            <span>Certified Specialists</span>
+          </div>
+        </div>
       </div>
 
       <section className="about-section" id="about">
