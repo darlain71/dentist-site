@@ -26,24 +26,6 @@ const Testimonials = () => {
       title: "Great for kids!",
       desc: "\"My children used to be terrified\nof the dentist until we found LifePath.\nThe pediatric team is so patient\nand makes every visit fun.\"",
       img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      author: "Sarah Jenkins",
-      title: "Incredible team support",
-      desc: "\"They really take the time to explain\nevery step of the procedure. It's the\nmost comfortable I've ever felt\nat any dental clinic.\"",
-      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      author: "Emily Davis",
-      title: "Painless and quick",
-      desc: "\"I used to dread going to the dentist,\nbut the team here changed my mind.\nEverything was quick, painless, and\nhighly professional.\"",
-      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
-    },
-    {
-      author: "Michael Chen",
-      title: "Highly recommend",
-      desc: "\"The scheduling is super flexible\nand they always fit me in when\nI have an emergency. State of the art\nfacility and great staff.\"",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
     }
   ];
 
