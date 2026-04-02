@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="footer-contact-info">
               <p><strong>East Legon Clinic:</strong><br />Accra, Ghana</p>
               <p style={{ marginTop: '0.5rem' }}><strong>Oyarifa Clinic:</strong><br />Accra, Ghana</p>
-              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a> / <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a><br />Email: info@lifedent.com</p>
+              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a> / <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a><br />Email: info@lifepath.com</p>
             </div>
             <div className="footer-email-line"></div>
           </div>
@@ -32,9 +32,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <h1 className="footer-huge-text">LifeDent</h1>
+          <h1 className="footer-huge-text">LifePath</h1>
           <p className="footer-copyright">
-            &copy; {new Date().getFullYear()} LifeDent. All Rights Reserved.
+            &copy; {new Date().getFullYear()} LifePath. All Rights Reserved.
           </p>
         </div>
       </footer>
