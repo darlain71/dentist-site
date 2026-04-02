@@ -54,7 +54,7 @@ body {
   bottom: 0;
   background: 
     linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%),
-    linear-gradient(to top, #faf8f5 0%, #faf8f5 2%, rgba(250, 248, 245, 0) 50%);
+    linear-gradient(to top, #ffffff 0%, #ffffff 2%, rgba(255, 255, 255, 0) 50%);
 }
 
 .header {
@@ -868,7 +868,7 @@ body {
 /* Testimonials Section */
 .testimonials-section {
   background-color: #ffffff;
-  color: #ffffff;
+  color: #1a1a1a;
   padding: 6rem 5%;
 }
 
@@ -1053,7 +1053,7 @@ body {
 }
 /* Product Section */
 .product-section {
-  background-color: #faf8f5;
+  background-color: #ffffff;
   color: #ffffff;
   padding: 6rem 5% 8rem 5%;
 }
@@ -2214,8 +2214,8 @@ body {
 
 /* Trust Banner */
 .trust-banner {
-  background-color: #0b0f19;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding: 1.5rem 5%;
 }
 
@@ -2233,7 +2233,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #ffffff;
+  color: #1a1a1a;
   font-weight: 500;
   font-size: 1.05rem;
 }

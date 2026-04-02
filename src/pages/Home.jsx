@@ -83,7 +83,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section" id="gallery" style={{ backgroundColor: '#faf8f5' }}>
+      <section className="product-section" id="gallery">
         <div className="product-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
