@@ -31,9 +31,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <h1 className="footer-huge-text" style={{ fontSize: '2rem', margin: '0' }}>LifeDent</h1>
-          <p style={{ margin: '0', paddingBottom: '1rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
+        <div className="footer-bottom">
+          <h1 className="footer-huge-text">LifeDent</h1>
+          <p className="footer-copyright">
             &copy; {new Date().getFullYear()} LifeDent. All Rights Reserved.
           </p>
         </div>

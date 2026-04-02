@@ -22,7 +22,6 @@ const Navbar = () => {
 
   const isHome = location.pathname === '/';
   const isAbout = location.pathname === '/about';
-  const isProduct = location.pathname === '/product';
   const isServices = location.pathname === '/services';
 
   return (
@@ -32,7 +31,6 @@ const Navbar = () => {
       <nav className="nav-menu">
         <Link to="/" className={`nav-link ${isHome && !location.hash ? 'active' : ''}`}>Home</Link>
         <Link to="/about" className={`nav-link ${isAbout ? 'active' : ''}`}>About</Link>
-        <Link to="/product" className={`nav-link ${isProduct ? 'active' : ''}`}>Product</Link>
         <Link to="/services" className={`nav-link ${isServices ? 'active' : ''}`}>Services</Link>
       </nav>
 
@@ -57,7 +55,6 @@ const Navbar = () => {
           </button>
           <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-          <Link to="/product" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Product</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <a href="tel:0248632660" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <Phone className="btn-icon" size={16} />

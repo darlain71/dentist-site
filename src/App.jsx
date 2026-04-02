@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Product from './pages/Product';
 import Services from './pages/Services';
 import CheckUp from './pages/services/CheckUp';
 import ScaleAndPolish from './pages/services/ScaleAndPolish';
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product" element={<Product />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/check-up" element={<CheckUp />} />
         <Route path="/services/scale-and-polish" element={<ScaleAndPolish />} />
