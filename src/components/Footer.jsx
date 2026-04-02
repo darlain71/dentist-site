@@ -1,9 +1,13 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { SocialIcons } from './ui/SocialIcons';
 
 const Footer = () => {
   return (
     <div className="footer-wrapper">
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+        <SocialIcons />
+      </div>
       <footer className="footer-section">
         <div className="footer-top">
           <div className="footer-left">
@@ -20,14 +24,6 @@ const Footer = () => {
               <li><a href="/">Home</a></li>
               <li><a href="/about">About Us</a></li>
               <li><a href="/services">Services</a></li>
-            </ul>
-
-            <ul className="footer-links-col">
-              <li><a href="#facebook">Facebook</a></li>
-              <li><a href="#instagram">Instagram</a></li>
-              <li><a href="#whatsapp">WhatsApp</a></li>
-              <li><a href="#linkedin">LinkedIn</a></li>
-              <li><a href="#tiktok">TikTok</a></li>
             </ul>
           </div>
         </div>
