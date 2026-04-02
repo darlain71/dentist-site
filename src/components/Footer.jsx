@@ -32,9 +32,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <h1 className="footer-huge-text">LifePath</h1>
           <p className="footer-copyright">
-            &copy; {new Date().getFullYear()} LifePath. All Rights Reserved.
+            &copy; {new Date().getFullYear()} All Rights Reserved.
           </p>
         </div>
       </footer>
