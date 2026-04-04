@@ -2573,7 +2573,7 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: auto;
+    min-height: 100vh;
     padding-top: 6rem;
     padding-bottom: 2rem;
   }
@@ -2595,8 +2595,8 @@ img {
     font-size: 3rem;
   }
   .book-appointment-btn, .about-btn, .works-btn, .services-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.45rem;
     width: 100%;
     justify-content: center;
   }
