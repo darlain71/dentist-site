@@ -37,12 +37,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="footer-copyright" style={{ paddingBottom: '0.5rem' }}>
-            &copy; {new Date().getFullYear()} All Rights Reserved.
-          </p>
-          <p className="footer-copyright">
-            Created By <a href="https://wa.me/qr/V4R6BT5BX6PPB1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Darlain</a>
-          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', alignItems: 'center' }}>
+            <p className="footer-copyright" style={{ paddingBottom: '0' }}>
+              &copy; {new Date().getFullYear()} All Rights Reserved.
+            </p>
+            <p className="footer-copyright" style={{ paddingBottom: '1.5rem' }}>
+              Created By <a href="https://wa.me/qr/V4R6BT5BX6PPB1" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Darlain</a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
