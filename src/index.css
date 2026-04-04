@@ -2573,9 +2573,12 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 100vh;
-    padding-top: 6rem;
+    min-height: calc(100vh - 10px);
+    padding-top: 4rem;
     padding-bottom: 2rem;
+  }
+  .hero-content {
+    margin-top: -6rem;
   }
   .hero-title {
     font-size: 2.3rem !important;
@@ -2595,9 +2598,10 @@ img {
     font-size: 3rem;
   }
   .book-appointment-btn, .about-btn, .works-btn, .services-btn {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.45rem;
-    width: 100%;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    width: fit-content;
+    align-self: center;
     justify-content: center;
   }
   .works-images-grid {
