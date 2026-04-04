@@ -2573,12 +2573,12 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: calc(100vh - 10px);
-    padding-top: 4rem;
+    min-height: calc(100vh - 20px);
+    padding-top: 2rem;
     padding-bottom: 2rem;
   }
   .hero-content {
-    margin-top: -6rem;
+    margin-top: 0;
   }
   .hero-title {
     font-size: 2.3rem !important;
