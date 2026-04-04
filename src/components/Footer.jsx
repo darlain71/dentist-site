@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { SocialIcons } from './ui/SocialIcons';
 
 const Footer = () => {
@@ -9,22 +8,32 @@ const Footer = () => {
         <SocialIcons />
       </div>
       <footer className="footer-section">
-        <div className="footer-top">
-          <div className="footer-left">
-            <h3 className="footer-heading">Contact & Locations</h3>
-            <div className="footer-contact-info">
-              <p><strong>East Legon Clinic:</strong><br />Accra, Ghana</p>
-              <p style={{ marginTop: '0.5rem' }}><strong>Oyarifa Clinic:</strong><br />Accra, Ghana</p>
-              <p style={{ marginTop: '1rem' }}>Phone: <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a> / <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a><br />Email: info@lifepath.com</p>
-            </div>
-            <div className="footer-email-line"></div>
+        <h2 className="footer-heading" style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem' }}>Contact &amp; Locations</h2>
+        <div className="footer-contact-row">
+          <div className="footer-contact-item">
+            <strong>East Legon Clinic</strong>
+            <span>Accra, Ghana</span>
           </div>
-          <div className="footer-links-grid">
-            <ul className="footer-links-col">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/services">Services</a></li>
-            </ul>
+          <div className="footer-divider" />
+          <div className="footer-contact-item">
+            <strong>Oyarifa Clinic</strong>
+            <span>Accra, Ghana</span>
+          </div>
+          <div className="footer-divider" />
+          <div className="footer-contact-item">
+            <strong>Phone</strong>
+            <span>
+              <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a>
+              {' '}/ {' '}
+              <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a>
+            </span>
+          </div>
+          <div className="footer-divider" />
+          <div className="footer-contact-item">
+            <strong>Email</strong>
+            <span>
+              <a href="mailto:info@lifepath.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@lifepath.com</a>
+            </span>
           </div>
         </div>
         <div className="footer-bottom">
