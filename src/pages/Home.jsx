@@ -18,7 +18,7 @@ const Home = () => {
     { id: 4, name: 'Philips Sonicare', logo: 'https://logo.clearbit.com/philips.com' },
     { id: 5, name: 'Invisalign', logo: 'https://logo.clearbit.com/invisalign.com' },
     { id: 6, name: 'Straumann', logo: 'https://logo.clearbit.com/straumann.com' },
-    { id: 7, name: 'HealthCare', logo: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFhUWGRoXGRcYGB0fHRoeIBsXIB0bHhkdHSggGBolGxgYITEhJSkrLy4uHx8zODMtNygtLisBCgoKDg0OGxAQGy0lICYvLS0tLy0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABQQGAgMHAQj/xABKEAACAQMABgYFCAgEBQQDAAABAgMABBEFBhIhMUETIlFhcYEHMlKRsRQjNEJyocHRFTNTYoKSsvBzwtLhFhdDg6IkVGPxJbPi/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMEAQIFBgf/xAA3EQACAgEDAwIFAgUEAQUBAAAAAQIDEQQSIQUxQRNRIjIzYXEUNBVCgZGhBiNSsSRDwdHh8Bb/2gALAwEAAhEDEQA/AO40AUAUAUAUAUAUAUBjJIFGWIAHMnAoCHJpJcZVSR7Rwq/zNjI8M0MNpdxBf65QIcNOmfZiUuf5vV+6sZIZaiCFx1olk/U2l1L3uxQHyUAUyR/qZP5Yno/ST71srdPtnaPvLU5Mb732RsisdLcvkieCj8BTkzjUfYzbR+lTxa0bxT/+acjF/wBjEW2k1OTb2j49nqn35pyM3rwjI6Zuo/1tjOvfDJtj+U5pkz60180SRa66QkhWkMbezPGVP8w3D3UybR1MH34LDb6SVhtDePaQh1943/dWSZST7EqOQMMqQR3UNjOgCgCgCgCgCgCgCgCgCgCgCgCgCgCgCgMZJAoLMQAOJNAJ9KacWNdpmWJPbk4n7EfFvPHnQ0nZGHcryaUubk/wDpICRn6RccPFU4DyFYyV3bOfEEbn1SDfOaQunl542thB5f/VZjByeFyY9DzNjbV63sSGNosR2DsllGd+PaO81vZVKv5lglrjX/ACkPSmt6wXi2zJ1OrtyZ9UtnAIx4e+rdWhlZS7E/wjWV6jPbgZ6zaW+S2zzYyQAFHeSfCv' }
+    { id: 7, name: 'HealthCare', logo: '/partners/healthcare.jpg' }
   ];
 
   return (
@@ -101,7 +101,7 @@ const Home = () => {
       </section>
 
       <section className="product-section" id="gallery">
-        <div className="product-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="product-container">
           <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
               Real Results, Real Smiles
@@ -111,27 +111,26 @@ const Home = () => {
               complete smile makeovers, our results speak for themselves.
             </p>
           </div>
-
-          <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Teeth Whitening Before and After" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
-              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Professional Teeth Whitening</h3>
-                <p style={{ color: '#666', fontSize: '0.95rem' }}>A brighter, more confident smile in just one session.</p>
+          <div className="gallery-grid">
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Teeth Whitening Before and After" className="gallery-img" />
+              <div className="gallery-content">
+                <h3>Professional Teeth Whitening</h3>
+                <p>A brighter, more confident smile in just one session.</p>
               </div>
             </div>
-            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental Care" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
-              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Complete Check-ups</h3>
-                <p style={{ color: '#666', fontSize: '0.95rem' }}>Comprehensive exams tracking your oral health over time.</p>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental Care" className="gallery-img" />
+              <div className="gallery-content">
+                <h3>Complete Check-ups</h3>
+                <p>Comprehensive exams tracking your oral health over time.</p>
               </div>
             </div>
-            <div className="gallery-item" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Dental Surgery" style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
-              <div style={{ padding: '1.5rem', backgroundColor: '#fff' }}>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Advanced Procedures</h3>
-                <p style={{ color: '#666', fontSize: '0.95rem' }}>Safe, comfortable, and effective treatments.</p>
+            <div className="gallery-item">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Dental Surgery" className="gallery-img" />
+              <div className="gallery-content">
+                <h3>Advanced Procedures</h3>
+                <p>Safe, comfortable, and effective treatments.</p>
               </div>
             </div>
           </div>
@@ -196,7 +195,11 @@ const Home = () => {
 
       {/* Partners Section */}
       <section className="partner-section">
-        <h2 className="partner-title">Some of our valuable partners</h2>
+        <h2 className="partner-title">Our Trusted Partners</h2>
+        <p className="partner-description">
+          We collaborate with world-class dental brands to ensure you receive 
+          the highest quality materials and technology for your smile.
+        </p>
         <div className="partner-marquee-container">
           <div className="partner-marquee-track">
             {[...partners, ...partners].map((partner, index) => (

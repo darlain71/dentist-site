@@ -1032,7 +1032,7 @@ h6,
 .testimonials-section {
   background-color: #ffffff;
   color: #1a1a1a;
-  padding: 4rem 5%;
+  padding: 2rem 5%;
 }
 
 .testimonials-header {
@@ -2859,7 +2859,7 @@ img {
 
 /* Partner Section Styles */
 .partner-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background-color: #ffffff;
   text-align: center;
   position: relative;
@@ -2870,8 +2870,17 @@ img {
   font-size: 2.25rem;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.partner-description {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .partner-marquee-container {
@@ -2917,8 +2926,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 260px;
-  height: 110px;
+  width: 280px;
+  height: 180px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.03);
@@ -2926,8 +2935,8 @@ img {
 }
 
 .partner-logo {
-  max-width: 150px;
-  max-height: 48px;
+  max-width: 180px;
+  max-height: 100px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -2948,10 +2957,80 @@ img {
   .partner-card {
     padding: 1rem 2rem;
     width: 200px;
-    height: 90px;
+    height: 150px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* slightly more visible border to compensate for no shadow */
   }
   
-  .partner-marquee-track {
+  .partner-logo {
+    max-height: 80px;
+  }
+  
+}
+
+/* Gallery Section Styles */
+.product-section {
+  padding: 6rem 1.5rem;
+  background-color: #f9fafb;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-content {
+  padding: 1.5rem;
+}
+
+.gallery-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.gallery-content p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 4rem 1rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .gallery-img {
+    height: 200px;
   }
 }
