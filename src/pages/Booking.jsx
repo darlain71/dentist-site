@@ -43,8 +43,31 @@ const Booking = () => {
   const [treatment, setTreatment] = useState('');
   const [timeSlot, setTimeSlot] = useState('');
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [date, setDate] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const phoneNumber = "233262083363"; // +233 standard for Ghana, based on 0262083363
+
+    const message = `*New Appointment Request* 🦷\n\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone:* ${phone}\n` +
+      `*Treatment:* ${treatment || 'Not specified'}\n` +
+      `*Preferred Date:* ${date}\n` +
+      `*Preferred Time:* ${timeSlot || 'Not specified'}\n`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, '_blank');
+
+    // Still show the success UI locally
     setSubmitted(true);
     window.scrollTo(0, 0);
   };
@@ -106,18 +129,36 @@ const Booking = () => {
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Name</label>
-              <input type="text" placeholder="Enter your name" required />
+              <input 
+                type="text" 
+                placeholder="Enter your name" 
+                required 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div className="form-col-modern">
               <label>Email</label>
-              <input type="email" placeholder="Enter your Email" required />
+              <input 
+                type="email" 
+                placeholder="Enter your Email" 
+                required 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
 
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Phone Number</label>
-              <input type="tel" placeholder="Enter number" required />
+              <input 
+                type="tel" 
+                placeholder="Enter number" 
+                required 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </div>
             <div className="form-col-modern">
               <CustomSelect 
@@ -134,7 +175,12 @@ const Booking = () => {
             <div className="form-col-modern">
               <label>Preferred Date</label>
               <div className="input-with-icon">
-                <input type="date" required />
+                <input 
+                  type="date" 
+                  required 
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                />
               </div>
             </div>
             <div className="form-col-modern">
