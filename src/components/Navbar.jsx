@@ -37,13 +37,10 @@ const Navbar = () => {
       </nav>
 
       <div className="nav-contact" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <a href="tel:0248632660" className="call-now-btn" style={{ padding: '0.65rem 1rem' }}>
+        <Link to="/booking" className="call-now-btn" style={{ padding: '0.65rem 1.15rem' }}>
+          <span>Book Now</span>
           <Phone className="btn-icon" size={16} />
-          <span>Call to Book</span>
-        </a>
-        <a href="tel:0554532013" className="call-now-btn" style={{ padding: '0.65rem 1rem', display: 'none' }} id="mobile-only-second-phone">
-          <Phone className="btn-icon" size={16} />
-        </a>
+        </Link>
       </div>
 
       <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
@@ -59,10 +56,10 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/gallery" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-          <a href="tel:0248632660" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link to="/booking" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
+            <span>Book Now</span>
             <Phone className="btn-icon" size={16} />
-            <span>Call to Book</span>
-          </a>
+          </Link>
         </div>
       )}
     </header>

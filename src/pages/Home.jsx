@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, ArrowRight, ArrowLeft, Star, MapPin, Award } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 
@@ -41,10 +42,10 @@ const Home = () => {
             Visit our clinics in East Legon and Oyarifa, Accra.
           </p>
 
-          <a href="tel:0248632660" className="book-appointment-btn" style={{ textDecoration: 'none', marginBottom: '2rem' }}>
-            <span>Book an Appointment</span>
+          <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', marginBottom: '2rem' }}>
+            <span>Book Now</span>
             <ArrowRight className="btn-icon" size={18} />
-          </a>
+          </Link>
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', alignItems: 'center' }} className="hero-trust-signals">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
