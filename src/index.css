@@ -2760,21 +2760,23 @@ img {
 
   .hero-content {
     margin-top: 8rem !important;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .title-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-title {
-    font-size: 2.1rem !important;
+    font-size: 2.8rem !important;
+    line-height: 1.1;
   }
 
   .hero-subtext {
     font-size: 0.95rem;
     line-height: 1.4;
+    text-align: left;
   }
 
   .about-title,
