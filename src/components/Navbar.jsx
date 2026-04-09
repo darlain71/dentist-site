@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, ArrowRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +37,9 @@ const Navbar = () => {
       </nav>
 
       <div className="nav-contact" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        <Link to="/booking" className="call-now-btn" style={{ padding: '0.65rem 1.15rem' }}>
-          <span>Book Now</span>
-          <Phone className="btn-icon" size={16} />
+        <Link to="/booking" className="call-now-btn" style={{ padding: '0.65rem 1.15rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span>Book Appointment</span>
+          <ArrowRight size={16} />
         </Link>
       </div>
 
@@ -56,9 +56,9 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/gallery" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-          <Link to="/booking" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
-            <span>Book Now</span>
-            <Phone className="btn-icon" size={16} />
+          <Link to="/booking" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+            <span>Book Appointment</span>
+            <ArrowRight size={16} />
           </Link>
         </div>
       )}

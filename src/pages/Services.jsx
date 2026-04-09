@@ -99,7 +99,7 @@ const Services = () => {
             Book your consultation today and experience world-class dental care at LifeDent.
           </p>
           <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', margin: '0 auto' }}>
-            <span>Book Now</span>
+            <span>Book Appointment</span>
             <ArrowRight className="btn-icon" size={18} />
           </Link>
         </div>

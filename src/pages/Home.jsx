@@ -43,7 +43,7 @@ const Home = () => {
           </p>
 
           <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', marginBottom: '2rem' }}>
-            <span>Book Now</span>
+            <span>Book Appointment</span>
             <ArrowRight className="btn-icon" size={18} />
           </Link>
 

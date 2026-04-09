@@ -1,9 +1,47 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import FAQ from '../components/FAQ';
+import Testimonials from '../components/Testimonials';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+
+const CustomSelect = ({ label, options, placeholder, value, onChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div className="custom-select-container">
+      <label>{label}</label>
+      <div 
+        className={`custom-select-trigger ${isOpen ? 'open' : ''}`} 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{value || placeholder}</span>
+        <ChevronDown size={20} className={`chevron-icon ${isOpen ? 'rotate' : ''}`} />
+      </div>
+      {isOpen && (
+        <div className="custom-select-options">
+          {options.map((opt) => (
+            <div 
+              key={opt} 
+              className={`custom-select-option ${value === opt ? 'active' : ''}`}
+              onClick={() => {
+                onChange(opt);
+                setIsOpen(false);
+              }}
+            >
+              {opt}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Booking = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [treatment, setTreatment] = useState('');
+  const [timeSlot, setTimeSlot] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +59,12 @@ const Booking = () => {
     'Cavity Filling'
   ];
 
+  const times = [
+    'Morning (8:00 AM - 12:00 PM)',
+    'Afternoon (12:00 PM - 4:00 PM)',
+    'Evening (4:00 PM - 7:00 PM)'
+  ];
+
   if (submitted) {
     return (
       <div className="booking-page-container" style={{ padding: '8rem 5% 4rem' }}>
@@ -32,13 +76,14 @@ const Booking = () => {
           <p style={{ color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
             Thank you for choosing LifeDent. One of our specialists will call you shortly to confirm your preferred time and finalize your appointment.
           </p>
-          <button 
-            onClick={() => window.location.href = '/'}
+          <Link 
+            to="/"
             className="book-appointment-btn"
-            style={{ margin: '0 auto' }}
+            style={{ margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}
           >
-            Return Home
-          </button>
+            <span>Return Home</span>
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     );
@@ -52,6 +97,10 @@ const Booking = () => {
 
       <section className="booking-form-section">
         <h1 className="booking-form-title">Make your Booking</h1>
+        <p className="booking-form-subtitle">
+          Ready for a brighter, healthier smile? Fill out the form below to request your appointment 
+          and our team will be in touch shortly to confirm your visit.
+        </p>
         
         <form className="booking-form-modern" onSubmit={handleSubmit}>
           <div className="form-row-modern">
@@ -71,11 +120,13 @@ const Booking = () => {
               <input type="tel" placeholder="Enter number" required />
             </div>
             <div className="form-col-modern">
-              <label>Treatment</label>
-              <select required>
-                <option value="">Select Treatment</option>
-                {services.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
+              <CustomSelect 
+                label="Treatment"
+                placeholder="Select Treatment"
+                options={services}
+                value={treatment}
+                onChange={setTreatment}
+              />
             </div>
           </div>
 
@@ -87,28 +138,27 @@ const Booking = () => {
               </div>
             </div>
             <div className="form-col-modern">
-              <label>Preferred Time</label>
-              <select required>
-                <option value="">Select time slot</option>
-                <option>Morning</option>
-                <option>Afternoon</option>
-                <option>Evening</option>
-              </select>
+              <CustomSelect 
+                label="Preferred Time"
+                placeholder="Select time slot"
+                options={times}
+                value={timeSlot}
+                onChange={setTimeSlot}
+              />
             </div>
-          </div>
-
-          <div className="terms-container">
-            <input type="checkbox" id="terms" required />
-            <label htmlFor="terms">I accept all terms and conditions.</label>
           </div>
 
           <div className="form-footer-modern">
             <button type="submit" className="modern-book-btn">
-              Book Now
+              <span>Book Appointment</span>
+              <ArrowRight size={20} />
             </button>
           </div>
         </form>
       </section>
+
+      <Testimonials />
+      <FAQ />
     </div>
   );
 };
