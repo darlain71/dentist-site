@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import Gallery from './pages/Gallery';
 import CheckUp from './pages/services/CheckUp';
 import ScaleAndPolish from './pages/services/ScaleAndPolish';
 import TeethWhitening from './pages/services/TeethWhitening';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/services/check-up" element={<CheckUp />} />
         <Route path="/services/scale-and-polish" element={<ScaleAndPolish />} />
         <Route path="/services/teeth-whitening" element={<TeethWhitening />} />

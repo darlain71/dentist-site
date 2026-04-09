@@ -203,7 +203,7 @@ h6,
   bottom: 0;
   background:
     linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(to top, #ffffff 0%, #ffffff 2%, rgba(255, 255, 255, 0) 50%);
+    linear-gradient(to top, #ffffff 0%, #ffffff 2%, rgba(255, 255, 255, 0) 25%);
 }
 
 .header {
@@ -2854,5 +2854,104 @@ img {
 
   .footer-heading {
     text-align: center;
+  }
+}
+
+/* Partner Section Styles */
+.partner-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+}
+
+.partner-marquee-container {
+  overflow: hidden;
+  padding: 2rem 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Gradient masks for smooth edges */
+.partner-marquee-container::before,
+.partner-marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partner-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.partner-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.partner-marquee-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+
+.partner-card {
+  background: #ffffff;
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 110px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  flex-shrink: 0;
+}
+
+.partner-logo {
+  max-width: 150px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .partner-title {
+    font-size: 1.75rem;
+  }
+  
+  .partner-card {
+    padding: 1rem 2rem;
+    width: 200px;
+    height: 90px;
+  }
+  
+  .partner-marquee-track {
+    gap: 1.5rem;
   }
 }

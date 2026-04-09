@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
 import { Phone, ArrowRight, ArrowLeft, Star, MapPin, Award } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { useInView } from 'react-intersection-observer';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 
 const Home = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const partners = [
+    { id: 1, name: 'Colgate', logo: 'https://logo.clearbit.com/colgate.com' },
+    { id: 2, name: 'Oral-B', logo: 'https://logo.clearbit.com/oralb.com' },
+    { id: 3, name: 'Sensodyne', logo: 'https://logo.clearbit.com/sensodyne.com' },
+    { id: 4, name: 'Philips Sonicare', logo: 'https://logo.clearbit.com/philips.com' },
+    { id: 5, name: 'Invisalign', logo: 'https://logo.clearbit.com/invisalign.com' },
+    { id: 6, name: 'Straumann', logo: 'https://logo.clearbit.com/straumann.com' },
+    { id: 7, name: 'HealthCare', logo: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFhUWGRoXGRcYGB0fHRoeIBsXIB0bHhkdHSggGBolGxgYITEhJSkrLy4uHx8zODMtNygtLisBCgoKDg0OGxAQGy0lICYvLS0tLy0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABQQGAgMHAQj/xABKEAACAQMABgYFCAgEBQQDAAABAgMABBEFBhIhMUETIlFhcYEHMlKRsRQjNEJyocHRFTNTYoKSsvBzwtLhFhdDg6IkVGPxJbPi/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMEAQIFBgf/xAA3EQACAgEDAwIFAgUEAQUBAAAAAQIDEQQSIQUxQRNRIjIzYXEUNBVCgZGhBiNSsSRDwdHh8Bb/2gALAwEAAhEDEQA/AO40AUAUAUAUAUAUAUBjJIFGWIAHMnAoCHJpJcZVSR7Rwq/zNjI8M0MNpdxBf65QIcNOmfZiUuf5vV+6sZIZaiCFx1olk/U2l1L3uxQHyUAUyR/qZP5Yno/ST71srdPtnaPvLU5Mb732RsisdLcvkieCj8BTkzjUfYzbR+lTxa0bxT/+acjF/wBjEW2k1OTb2j49nqn35pyM3rwjI6Zuo/1tjOvfDJtj+U5pkz60180SRa66QkhWkMbezPGVP8w3D3UybR1MH34LDb6SVhtDePaQh1943/dWSZST7EqOQMMqQR3UNjOgCgCgCgCgCgCgCgCgCgCgCgCgCgCgCgMZJAoLMQAOJNAJ9KacWNdpmWJPbk4n7EfFvPHnQ0nZGHcryaUubk/wDpICRn6RccPFU4DyFYyV3bOfEEbn1SDfOaQunl542thB5f/VZjByeFyY9DzNjbV63sSGNosR2DsllGd+PaO81vZVKv5lglrjX/ACkPSmt6wXi2zJ1OrtyZ9UtnAIx4e+rdWhlZS7E/wjWV6jPbgZ6zaW+S2zzYyQAFHeSfCv' }
+  ];
+
   return (
     <>
       <Helmet>
@@ -25,31 +41,32 @@ const Home = () => {
             Visit our clinics in East Legon and Oyarifa, Accra.
           </p>
 
-          <a href="tel:0248632660" className="book-appointment-btn" style={{ textDecoration: 'none' }}>
+          <a href="tel:0248632660" className="book-appointment-btn" style={{ textDecoration: 'none', marginBottom: '2rem' }}>
             <span>Book an Appointment</span>
             <ArrowRight className="btn-icon" size={18} />
           </a>
 
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', alignItems: 'center' }} className="hero-trust-signals">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Star size={18} color="#d4a373" />
+              <span>10+ Years Experience</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <MapPin size={18} color="#d4a373" />
+              <span>East Legon & Oyarifa</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Award size={18} color="#d4a373" />
+              <span>Certified Specialists</span>
+            </div>
+          </div>
+
         </main>
       </div>
 
-      {/* Horizontal Trust Banner */}
-      <div className="trust-banner">
-        <div className="trust-banner-inner">
-          <div className="signal">
-            <Star size={24} color="#d4a373" />
-            <span>10+ Years Experience</span>
-          </div>
-          <div className="signal">
-            <MapPin size={24} color="#d4a373" />
-            <span>East Legon & Oyarifa</span>
-          </div>
-          <div className="signal">
-            <Award size={24} color="#d4a373" />
-            <span>Certified Specialists</span>
-          </div>
-        </div>
-      </div>
+
+
+
 
       <section className="about-section" id="about">
         <div className="about-grid">
@@ -173,6 +190,23 @@ const Home = () => {
                 <p className="work-card-desc">Improve your smile with cleaning.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="partner-section">
+        <h2 className="partner-title">Some of our valuable partners</h2>
+        <div className="partner-marquee-container">
+          <div className="partner-marquee-track">
+            {[...partners, ...partners].map((partner, index) => (
+              <div 
+                key={`${partner.id}-${index}`} 
+                className="partner-card"
+              >
+                <img src={partner.logo} alt={partner.name} className="partner-logo" />
+              </div>
+            ))}
           </div>
         </div>
       </section>

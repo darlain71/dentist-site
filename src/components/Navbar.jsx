@@ -23,6 +23,7 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
   const isAbout = location.pathname === '/about';
   const isServices = location.pathname === '/services';
+  const isGallery = location.pathname === '/gallery';
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''} ${!isHome ? 'inner-header' : ''}`}>
@@ -32,6 +33,7 @@ const Navbar = () => {
         <Link to="/" className={`nav-link ${isHome && !location.hash ? 'active' : ''}`}>Home</Link>
         <Link to="/about" className={`nav-link ${isAbout ? 'active' : ''}`}>About</Link>
         <Link to="/services" className={`nav-link ${isServices ? 'active' : ''}`}>Services</Link>
+        <Link to="/gallery" className={`nav-link ${isGallery ? 'active' : ''}`}>Gallery</Link>
       </nav>
 
       <div className="nav-contact" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -56,6 +58,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link to="/gallery" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
           <a href="tel:0248632660" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)}>
             <Phone className="btn-icon" size={16} />
             <span>Call to Book</span>
