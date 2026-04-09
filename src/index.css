@@ -3256,7 +3256,7 @@ img {
 
 @media (max-width: 768px) {
   .booking-form-section {
-    padding-top: 8rem;
+    padding: 7rem 1.25rem 4rem;
   }
   
   .form-row-modern {
@@ -3265,7 +3265,60 @@ img {
   }
   
   .booking-form-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .booking-form-subtitle {
+    font-size: 0.95rem;
     margin-bottom: 2.5rem;
   }
-}
+
+  .booking-form-modern {
+    gap: 1.5rem;
+  }
+
+  .form-col-modern input,
+  .form-col-modern select,
+  .custom-select-trigger {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .form-col-modern label,
+  .custom-select-container label {
+    font-size: 0.95rem;
+  }
+
+  .modern-book-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+
+  .form-footer-modern {
+    justify-content: stretch;
+  }
+
+  .custom-select-options {
+    border-radius: 16px;
+  }
+
+  .custom-select-option {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .booking-success-card {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .booking-success-card h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .booking-success-card p {
+    font-size: 0.95rem !important;
+  }
+}
+
