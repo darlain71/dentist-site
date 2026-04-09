@@ -47,96 +47,67 @@ const Booking = () => {
   return (
     <div className="booking-page-container">
       <Helmet>
-        <title>Book an Appointment | LifeDent - Expert Dental Care</title>
-        <meta name="description" content="Schedule your dental visit at LifeDent. Choose your service, preferred date and time for expert dental care in Accra." />
+        <title>Make your Booking | LifeDent</title>
       </Helmet>
 
-      <section className="booking-hero">
-        <div className="booking-hero-content">
-          <h1 className="booking-title">Schedule Your Visit</h1>
-          <p className="booking-subtitle">
-            Take the first step towards a healthier, brighter smile. 
-            Fill out the form below and we'll handle the rest.
-          </p>
-        </div>
-      </section>
-
       <section className="booking-form-section">
-        <div className="booking-grid">
-          <div className="booking-form-wrapper">
-            <form className="booking-form" onSubmit={handleSubmit}>
-              <div className="form-group-row">
-                <div className="form-group">
-                  <label><User size={18} /> Full Name</label>
-                  <input type="text" placeholder="John Doe" required />
-                </div>
-                <div className="form-group">
-                  <label><Phone size={18} /> Phone Number</label>
-                  <input type="tel" placeholder="024 000 0000" required />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label><Mail size={18} /> Email Address</label>
-                <input type="email" placeholder="john@example.com" required />
-              </div>
-
-              <div className="form-group">
-                <label><MessageSquare size={18} /> Select Service</label>
-                <select required>
-                  <option value="">Choose a service...</option>
-                  {services.map(service => (
-                    <option key={service} value={service}>{service}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="form-group-row">
-                <div className="form-group">
-                  <label><Calendar size={18} /> Preferred Date</label>
-                  <input type="date" required />
-                </div>
-                <div className="form-group">
-                  <label><Clock size={18} /> Preferred Time</label>
-                  <select required>
-                    <option value="">Select time slot...</option>
-                    <option>Morning (8:00 AM - 12:00 PM)</option>
-                    <option>Afternoon (12:00 PM - 4:00 PM)</option>
-                    <option>Evening (4:00 PM - 7:00 PM)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label><MessageSquare size={18} /> Additional Notes (Optional)</label>
-                <textarea placeholder="Tell us about any specific concerns..." rows="4"></textarea>
-              </div>
-
-              <button type="submit" className="booking-submit-btn">
-                Confirm Booking Request
-              </button>
-            </form>
-          </div>
-
-          <div className="booking-info-sidebar">
-            <div className="info-card">
-              <h3>Why Choose LifeDent?</h3>
-              <ul className="info-list">
-                <li>Certified specialist dentists</li>
-                <li>State-of-the-art dental technology</li>
-                <li>Comfortable, pain-free environment</li>
-                <li>Affordable payment plans available</li>
-              </ul>
+        <h1 className="booking-form-title">Make your Booking</h1>
+        
+        <form className="booking-form-modern" onSubmit={handleSubmit}>
+          <div className="form-row-modern">
+            <div className="form-col-modern">
+              <label>Name</label>
+              <input type="text" placeholder="Enter your name" required />
             </div>
-            
-            <div className="info-card quick-contact">
-              <h3>Quick Contact</h3>
-              <p>Need immediate assistance?</p>
-              <a href="tel:0248632660" className="sidebar-phone">024 863 2660</a>
-              <p className="working-hours">Mon - Sat: 8:00 AM - 7:00 PM</p>
+            <div className="form-col-modern">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your Email" required />
             </div>
           </div>
-        </div>
+
+          <div className="form-row-modern">
+            <div className="form-col-modern">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Enter number" required />
+            </div>
+            <div className="form-col-modern">
+              <label>Treatment</label>
+              <select required>
+                <option value="">Select Treatment</option>
+                {services.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div className="form-row-modern">
+            <div className="form-col-modern">
+              <label>Preferred Date</label>
+              <div className="input-with-icon">
+                <input type="date" required />
+              </div>
+            </div>
+            <div className="form-col-modern">
+              <label>Preferred Time</label>
+              <select required>
+                <option value="">Select time slot</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="terms-container">
+            <input type="checkbox" id="terms" required />
+            <label htmlFor="terms">I accept all terms and conditions.</label>
+          </div>
+
+          <div className="form-footer-modern">
+            <button type="submit" className="modern-book-btn">
+              Book Now
+            </button>
+          </div>
+        </form>
       </section>
     </div>
   );

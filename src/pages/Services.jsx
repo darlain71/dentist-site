@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 
@@ -91,6 +92,16 @@ const Services = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '6rem', padding: '4rem 2rem', background: '#f9fafb', borderRadius: '32px' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>Ready for a Brighter Smile?</h2>
+          <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+            Book your consultation today and experience world-class dental care at LifeDent.
+          </p>
+          <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', margin: '0 auto' }}>
+            <span>Book Now</span>
+            <ArrowRight className="btn-icon" size={18} />
+          </Link>
         </div>
       </section>
       <Testimonials />
