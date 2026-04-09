@@ -139,13 +139,13 @@
 }
 
 :root {
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --bg-color: #ffffff;
-  --text-main: #1a1a1a;
-  --text-sub: #666666;
-  --glass-bg: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.1);
+  --font-heading: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Chivo Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bg-color: #0b0f19;
+  --text-main: #ffffff;
+  --text-sub: rgba(255, 255, 255, 0.75);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -258,10 +258,6 @@ h6,
   color: #ffffff;
 }
 
-.inner-header .logo {
-  color: #000000;
-}
-
 .nav-menu {
   display: flex;
   align-items: center;
@@ -276,21 +272,13 @@ h6,
 }
 
 .nav-link {
-  color: #ffffff;
+  color: var(--text-main);
   text-decoration: none;
   font-weight: 400;
   font-size: 0.95rem;
   transition: all 0.2s ease;
   padding: 0.5rem 1rem;
   border-radius: 1.5rem;
-}
-
-.inner-header .nav-link {
-  color: #1a1a1a;
-}
-
-.inner-header .nav-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .nav-link:hover {
@@ -301,11 +289,6 @@ h6,
   background-color: #ffffff;
   color: #000000;
   font-weight: 600;
-}
-
-.inner-header .nav-link.active {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 .call-now-btn {
@@ -323,11 +306,6 @@ h6,
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.inner-header .call-now-btn {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 .call-now-btn:hover,
@@ -2491,7 +2469,7 @@ h6,
   display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
   .header .nav-menu,
   .header .call-now-btn {
@@ -2504,7 +2482,7 @@ h6,
 
   .mobile-menu-btn {
     display: block;
-    color: #1a1a1a;
+    color: #ffffff;
     align-self: center;
   }
 
@@ -2516,7 +2494,7 @@ h6,
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #0b0f19;
     z-index: 9999;
     padding: 2rem;
     padding-top: 6rem;
@@ -2531,14 +2509,11 @@ h6,
   .mobile-menu .nav-link {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #1a1a1a;
   }
 
   .mobile-menu .call-now-btn {
     margin-top: 1rem;
     display: flex !important;
-    background-color: #000000;
-    color: #ffffff;
   }
 
   .mobile-menu-close {
@@ -2547,7 +2522,7 @@ h6,
     right: 5%;
     background: none;
     border: none;
-    color: #1a1a1a;
+    color: #ffffff;
     cursor: pointer;
   }
 }
@@ -2996,7 +2971,7 @@ img {
 /* Gallery Section Styles */
 .product-section {
   padding: 6rem 1.5rem;
-  background-color: #ffffff;
+  background-color: #f9fafb;
 }
 
 .product-container {
@@ -3045,56 +3020,17 @@ img {
   line-height: 1.5;
 }
 
-/* Gallery Page Specific Styles */
-.gallery-page-section {
-  padding: 4rem 5%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.gallery-page-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 300px;
-  grid-auto-flow: dense;
-  gap: 15px;
-}
-
-.gallery-page-item {
-  overflow: hidden;
-}
-
-.gallery-page-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-page-item.extra-big {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gallery-page-item.big {
-  grid-column: span 2;
-}
-
-@media (max-width: 1024px) {
-  .gallery-page-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .gallery-page-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 250px;
+@media (max-width: 768px) {
+  .product-section {
+    padding: 4rem 1rem;
   }
   
-  .gallery-page-item.extra-big,
-  .gallery-page-item.big {
-    grid-column: span 1;
-    grid-row: span 1;
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gallery-img {
+    height: 200px;
   }
 }
