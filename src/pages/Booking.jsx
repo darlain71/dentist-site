@@ -174,15 +174,16 @@ const Booking = () => {
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Preferred Date</label>
-              <input 
-                type={date ? "date" : "text"}
-                placeholder="Select Date"
-                required 
-                value={date}
-                onFocus={(e) => e.target.type = 'date'}
-                onBlur={(e) => { if (!date) e.target.type = 'text'; }}
-                onChange={(e) => setDate(e.target.value)}
-              />
+              <div className="date-input-wrapper">
+                <input 
+                  type="date" 
+                  required 
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  className={date ? 'has-value' : ''}
+                />
+                {!date && <span className="date-placeholder">Select Date</span>}
+              </div>
             </div>
             <div className="form-col-modern">
               <CustomSelect 
