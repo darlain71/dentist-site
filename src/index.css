@@ -3211,6 +3211,20 @@ img {
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
+.form-col-modern input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  color: #1a1a1a;
+}
+
+.form-col-modern input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 1.2rem;
+}
+
 .terms-container {
   display: flex;
   align-items: center;

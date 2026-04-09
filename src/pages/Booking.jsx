@@ -174,14 +174,12 @@ const Booking = () => {
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Preferred Date</label>
-              <div className="input-with-icon">
-                <input 
-                  type="date" 
-                  required 
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                />
-              </div>
+              <input 
+                type="date" 
+                required 
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
             </div>
             <div className="form-col-modern">
               <CustomSelect 
