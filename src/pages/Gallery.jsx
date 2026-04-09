@@ -38,22 +38,8 @@ const Gallery = () => {
           gridAutoFlow: 'dense',
           gap: '20px',
         }}>
-          {images.map((img, index) => {
-            const isExtraBig = img.size === 'extra-big';
-            const isBig = img.size === 'big';
-            
-            return (
-              <div key={index} style={{
-                gridColumn: isExtraBig ? 'span 2' : isBig ? 'span 2' : 'span 1',
-                gridRow: isExtraBig ? 'span 2' : 'span 1',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-                transition: 'transform 0.3s ease',
-              }}
-              onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-              onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-              >
+          {images.map((img, index) => (
+            <div key={index} className={`gallery-page-card ${img.size}`}>
                 <img 
                   src={img.src} 
                   alt={img.alt} 
@@ -65,8 +51,7 @@ const Gallery = () => {
                   }} 
                 />
               </div>
-            );
-          })}
+            ))}
         </div>
       </section>
 
