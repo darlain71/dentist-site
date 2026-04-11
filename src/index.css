@@ -174,7 +174,7 @@ h6,
 
 .hero-section {
   position: relative;
-  min-height: calc(85vh + 20px);
+  min-height: 75vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -459,7 +459,7 @@ h6,
 
   .hero-section {
     padding: 1.5rem;
-    min-height: 85vh;
+    min-height: 65vh;
   }
 
   .hero-content {
