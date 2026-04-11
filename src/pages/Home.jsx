@@ -42,26 +42,14 @@ const Home = () => {
             Visit our clinics in East Legon and Oyarifa, Accra.
           </p>
 
-          <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', marginBottom: '2rem' }}>
-            <span>Book Appointment</span>
-            <ArrowRight className="btn-icon" size={18} />
-          </Link>
-
-          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', alignItems: 'center' }} className="hero-trust-signals">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Star size={18} color="#d4a373" />
-              <span>10+ Years Experience</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <MapPin size={18} color="#d4a373" />
-              <span>East Legon & Oyarifa</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Award size={18} color="#d4a373" />
-              <span>Certified Specialists</span>
-            </div>
+          <div className="hero-actions">
+            <Link to="/booking" className="hero-btn-black">
+              Book Appointment
+            </Link>
+            <Link to="/services" className="hero-btn-white">
+              Services
+            </Link>
           </div>
-
         </main>
       </div>
 
