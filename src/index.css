@@ -453,13 +453,19 @@ h6,
 }
 
 @media (max-width: 768px) {
+  .hero-background::after {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 40%, rgba(255, 255, 255, 0) 65%);
+  }
+
   .hero-section {
     padding: 1.5rem;
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .hero-content {
-    padding-top: 8rem;
+    padding-top: 0;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
   }
 
   .hero-cards {
@@ -2842,16 +2848,24 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 75vh;
+    min-height: 100vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   .hero-content {
     margin-top: 0 !important;
-    padding-top: 4rem;
+    padding-top: 0;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   .title-row {
