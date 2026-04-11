@@ -460,25 +460,31 @@ h6,
   .hero-section {
     padding: 0;
     min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   
   .hero-content {
-    margin-top: -4rem; /* Compensate for subtext and buttons to align headline to midpoint */
-    padding: 0 1.5rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
+    height: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 320px;
+    margin: 1.5rem auto 2rem;
   }
   
   .hero-actions {
     justify-content: center;
     width: 100%;
-    margin-top: 2rem;
   }
 
   .hero-cards {
