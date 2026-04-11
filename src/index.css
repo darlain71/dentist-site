@@ -463,9 +463,9 @@ h6,
   }
 
   .hero-content {
-    padding-top: 0;
-    justify-content: center;
-    padding-bottom: 10rem;
+    padding-top: 8rem;
+    justify-content: flex-start;
+    padding-bottom: 0;
   }
 
   .hero-cards {
