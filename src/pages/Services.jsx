@@ -93,14 +93,14 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div style={{ textAlign: 'center', marginTop: '6rem', padding: '4rem 2rem', background: '#f9fafb', borderRadius: '32px' }}>
+        <div style={{ textAlign: 'center', marginTop: '6rem', padding: '4rem 2rem', background: '#ffffff', borderRadius: '32px' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>Ready for a Brighter Smile?</h2>
           <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
             Book your consultation today and experience world-class dental care at LifeDent.
           </p>
-          <Link to="/booking" className="book-appointment-btn" style={{ textDecoration: 'none', margin: '0 auto' }}>
+          <Link to="/booking" className="works-btn" style={{ textDecoration: 'none', margin: '0 auto' }}>
             <span>Book Appointment</span>
-            <ArrowRight className="btn-icon" size={18} />
+            <ArrowRight className="btn-icon" size={16} />
           </Link>
         </div>
       </section>
