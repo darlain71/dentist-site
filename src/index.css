@@ -458,14 +458,26 @@ h6,
   }
 
   .hero-section {
-    padding: 0.1rem;
-    min-height: 45vh;
+    padding: 0;
+    min-height: 50vh; /* slightly more room to fit everything comfortably */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
+  
   .hero-content {
-    padding-top: 0.1rem;
-    justify-content: flex-start;
-    padding-bottom: 0;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
   }
 
   .hero-cards {
