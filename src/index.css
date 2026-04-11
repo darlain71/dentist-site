@@ -458,12 +458,12 @@ h6,
   }
 
   .hero-section {
-    padding: 1.5rem;
+    padding: 0.1rem;
     min-height: 45vh;
   }
 
   .hero-content {
-    padding-top: 0.5rem;
+    padding-top: 0.1rem;
     justify-content: flex-start;
     padding-bottom: 0;
   }
