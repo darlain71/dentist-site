@@ -502,7 +502,7 @@ h6,
 
   .hero-section {
     padding: 0;
-    min-height: 82vh;
+    min-height: 88vh;
   }
   
   .hero-content {
@@ -2866,7 +2866,7 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 87vh;
+    min-height: 93vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
