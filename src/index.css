@@ -682,6 +682,30 @@ h6,
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.modern-book-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.date-mobile-placeholder {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .date-mobile-placeholder {
+    display: block;
+    position: absolute;
+    left: 1.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+
 .about-img-center-wrapper {
   width: 100%;
   border-radius: 20px;
@@ -3502,5 +3526,22 @@ img {
   .date-placeholder {
     left: 1.25rem;
     font-size: 0.95rem;
+  }
+}
+.date-mobile-placeholder {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .date-mobile-placeholder {
+    display: block;
+    position: absolute;
+    left: 1.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,0.5);
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 5;
   }
 }
