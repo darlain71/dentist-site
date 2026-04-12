@@ -176,8 +176,7 @@ const Booking = () => {
               <label>Preferred Date</label>
               <div className="date-input-wrapper">
                 <input 
-                  type="text" 
-                  placeholder="dd/mm/yyyy"
+                  type="date" 
                   required 
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
