@@ -176,13 +176,13 @@ const Booking = () => {
               <label>Preferred Date</label>
               <div className="date-input-wrapper">
                 <input 
-                  type="date" 
+                  type="text" 
+                  placeholder="dd/mm/yyyy"
                   required 
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                   className={date ? 'has-value' : ''}
                 />
-                {!date && <span className="date-placeholder">Select Date</span>}
               </div>
             </div>
             <div className="form-col-modern">
