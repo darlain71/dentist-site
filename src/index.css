@@ -3544,4 +3544,8 @@ img {
     pointer-events: none;
     z-index: 5;
   }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 }
