@@ -3372,6 +3372,11 @@ img {
   color: transparent;
 }
 
+.form-col-modern input[type="date"]:focus,
+.form-col-modern input[type="date"]:active {
+  color: #1a1a1a !important;
+}
+
 @media (min-width: 769px) {
   .form-col-modern input[type="date"]:not(.has-value) {
     color: rgba(0, 0, 0, 0.5);
