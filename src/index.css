@@ -492,8 +492,12 @@ h6,
 }
 
 @media (max-width: 767px) {
+  .hero-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hero_bg.png');
+  }
+
   .hero-background::after {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 30%, rgba(255, 255, 255, 0) 50%);
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 35%);
   }
 
   .hero-section {
@@ -520,6 +524,7 @@ h6,
     line-height: 1.6;
     max-width: 320px;
     margin: 0.25rem auto 1rem;
+    color: #ffffff !important;
   }
   
   .hero-actions {
@@ -2714,10 +2719,12 @@ h6,
 @media (max-width: 767px) {
   .hero-title {
     font-size: 3rem;
+    color: #ffffff !important;
   }
 
   .hero-subtext {
     font-size: 1rem;
+    color: #ffffff !important;
   }
 
   .about-title {
