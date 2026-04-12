@@ -26,7 +26,7 @@ const CavityFilling = () => {
             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><CheckCircle2 size={18} color="#0b0f19" /> Filling the cavity with durable, tooth-colored materials</li>
           </ul>
 
-          <a href="tel:0248632660" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
+          <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
             <span>Book Your Filling</span>
             <ArrowRight className="btn-icon" size={16} />
           </a>

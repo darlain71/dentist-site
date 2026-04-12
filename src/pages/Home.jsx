@@ -70,7 +70,7 @@ const Home = () => {
               to create comfortable and welcoming environment for each and<br />
               every patient. We offer a wide range of services.
             </p>
-            <a href="tel:0248632660" className="about-btn" style={{ textDecoration: 'none' }}>
+            <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none' }}>
               <span>Book Appointment</span>
               <ArrowRight className="btn-icon" size={16} />
             </a>
@@ -125,7 +125,7 @@ const Home = () => {
           </div>
           
           <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-             <a href="tel:0248632660" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+             <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
                 <span>Book Your Consultation</span>
                 <ArrowRight className="btn-icon" size={16} />
               </a>
@@ -143,7 +143,7 @@ const Home = () => {
                 welcoming environment for each.
               </p>
 
-              <a href="tel:0248632660" className="works-btn black-btn" style={{ textDecoration: 'none' }}>
+              <a href="tel:0535516633" className="works-btn black-btn" style={{ textDecoration: 'none' }}>
                 <span>Book Appointment</span>
                 <ArrowRight className="btn-icon" size={16} />
               </a>

@@ -175,7 +175,7 @@ h6,
 .hero-section {
   position: relative;
   min-height: 75vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 5% 2rem 5%;
@@ -323,7 +323,7 @@ h6,
   max-width: 1200px;
   margin: 0 auto;
   z-index: 10;
-  padding-top: 14rem;
+  padding-top: 12rem;
 }
 
 .hero-label {
@@ -454,7 +454,7 @@ h6,
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-background::after {
     background: linear-gradient(to top, #ffffff 0%, #ffffff 40%, rgba(255, 255, 255, 0) 65%);
   }
@@ -1384,7 +1384,7 @@ h6,
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer-contact-row {
     flex-direction: column;
     align-items: center;
@@ -2121,7 +2121,7 @@ h6,
   color: #666;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .pill-links {
     display: none;
   }
@@ -2404,7 +2404,7 @@ h6,
   color: #1a1a1a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .faq-title {
     font-size: 2.5rem;
   }
@@ -2433,7 +2433,7 @@ h6,
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-title {
     font-size: 4.5rem !important;
   }
@@ -2588,76 +2588,8 @@ h6,
   }
 }
 
-/* --- Mobile Menu Styles --- */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-}
 
-.mobile-menu {
-  display: none;
-}
 
-@media (max-width: 768px) {
-
-  .header .nav-menu,
-  .header .call-now-btn {
-    display: none !important;
-  }
-
-  .header.inner-header .mobile-menu-btn {
-    color: #1a1a1a;
-  }
-
-  .mobile-menu-btn {
-    display: block;
-    color: #ffffff;
-    align-self: center;
-  }
-
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #0b0f19;
-    z-index: 9999;
-    padding: 2rem;
-    padding-top: 6rem;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .mobile-menu.open {
-    display: flex;
-  }
-
-  .mobile-menu .nav-link {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  .mobile-menu .call-now-btn {
-    margin-top: 1rem;
-    display: flex !important;
-  }
-
-  .mobile-menu-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 5%;
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-  }
-}
 
 
 /* Trust Banner */
@@ -2740,7 +2672,7 @@ h6,
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-title {
     font-size: 3rem;
   }
@@ -2807,8 +2739,7 @@ img {
   z-index: 1001;
 }
 
-@media (max-width: 992px) {
-
+@media (max-width: 767px) {
   .nav-menu,
   .nav-contact {
     display: none !important;
@@ -2831,7 +2762,7 @@ img {
     align-items: center;
     gap: 1.5rem;
     z-index: 2000;
-    animation: slideDown 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -2983,7 +2914,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .about-grid,
   .works-grid,
@@ -3101,7 +3032,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .partner-title {
     font-size: 1.75rem;
   }
@@ -3173,7 +3104,7 @@ img {
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .product-section {
     padding: 4rem 1rem;
   }
@@ -3454,7 +3385,7 @@ img {
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .booking-form-section {
     padding: 7rem 1.25rem 4rem;
   }

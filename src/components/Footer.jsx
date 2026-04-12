@@ -23,9 +23,9 @@ const Footer = () => {
           <div className="footer-contact-item">
             <strong>Phone</strong>
             <span>
-              <a href="tel:0248632660" style={{ color: 'inherit', textDecoration: 'none' }}>024 8632 660</a>
+              <a href="tel:0535516633" style={{ color: 'inherit', textDecoration: 'none' }}>053 551 6633</a>
               {' '}/ {' '}
-              <a href="tel:0554532013" style={{ color: 'inherit', textDecoration: 'none' }}>055 453 2013</a>
+              <a href="tel:0505017267" style={{ color: 'inherit', textDecoration: 'none' }}>050 501 7267</a>
             </span>
           </div>
           <div className="footer-divider" />
