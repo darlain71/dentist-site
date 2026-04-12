@@ -51,21 +51,21 @@ const Booking = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "233262083363"; // +233 standard for Ghana, based on 0262083363
+    const emailAddress = "asinorc71@gmail.com";
+    const subject = `New Appointment Request from ${name}`;
 
-    const message = `*New Appointment Request* 🦷\n\n` +
-      `*Name:* ${name}\n` +
-      `*Email:* ${email}\n` +
-      `*Phone:* ${phone}\n` +
-      `*Treatment:* ${treatment || 'Not specified'}\n` +
-      `*Preferred Date:* ${date}\n` +
-      `*Preferred Time:* ${timeSlot || 'Not specified'}\n`;
+    const body = `New Appointment Request 🦷\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `Treatment: ${treatment || 'Not specified'}\n` +
+      `Preferred Date: ${date}\n` +
+      `Preferred Time: ${timeSlot || 'Not specified'}\n`;
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open WhatsApp in a new tab/window
-    window.open(whatsappUrl, '_blank');
+    // Open default mail client
+    window.location.href = mailtoUrl;
 
     // Still show the success UI locally
     setSubmitted(true);
