@@ -3528,23 +3528,10 @@ img {
     font-size: 0.95rem;
   }
 }
-.date-mobile-placeholder {
-  display: none;
-}
+
+
 
 @media (max-width: 767px) {
-  .date-mobile-placeholder {
-    display: block;
-    position: absolute;
-    left: 1.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(0,0,0,0.5);
-    font-size: 1rem;
-    pointer-events: none;
-    z-index: 5;
-  }
-
   input[type="date"]::-webkit-calendar-picker-indicator,
   input[type="date"]::-webkit-inner-spin-button,
   input[type="date"]::-webkit-clear-button {

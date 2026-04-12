@@ -182,7 +182,6 @@ const Booking = () => {
                   onChange={(e) => setDate(e.target.value)}
                   className={date ? 'has-value' : ''}
                 />
-                {!date && <span className="date-mobile-placeholder">select date</span>}
               </div>
             </div>
             <div className="form-col-modern">
