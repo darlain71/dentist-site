@@ -3557,8 +3557,8 @@ img {
     z-index: 5;
   }
 
-  /* Make menu button white on non-homepage pages */
+  /* Make menu button black on non-homepage pages */
   .header.inner-header .mobile-menu-btn {
-    color: #ffffff !important;
+    color: #1a1a1a !important;
   }
 }
