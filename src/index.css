@@ -3532,10 +3532,16 @@ img {
 
 
 @media (max-width: 767px) {
+  input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
   input[type="date"]::-webkit-calendar-picker-indicator,
   input[type="date"]::-webkit-inner-spin-button,
   input[type="date"]::-webkit-clear-button {
     display: none !important;
     -webkit-appearance: none;
+    opacity: 0;
   }
 }
