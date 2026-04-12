@@ -497,7 +497,7 @@ h6,
   }
 
   .hero-background::after {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0) 35%);
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 10%, rgba(255, 255, 255, 0) 18%);
   }
 
   .hero-section {
