@@ -519,7 +519,12 @@ h6,
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+  
+  .title-row {
+    white-space: nowrap;
+    display: block;
   }
 
   .header {
