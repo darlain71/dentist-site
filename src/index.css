@@ -502,7 +502,7 @@ h6,
 
   .hero-section {
     padding: 0;
-    min-height: 88vh;
+    min-height: 92vh;
   }
   
   .hero-content {
@@ -516,7 +516,7 @@ h6,
     align-items: center;
     text-align: center;
     height: 100%;
-    transform: translateY(-80px);
+    transform: translateY(-120px);
   }
   
   .hero-subtext {
@@ -2614,7 +2614,7 @@ h6,
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    transform: translateY(-80px);
+    transform: translateY(-120px);
   }
 
   .hero-subtext {
@@ -2866,7 +2866,7 @@ img {
 /* Universal Responsive Adjustments for Mobile / Small Devices */
 @media (max-width: 480px) {
   .hero-section {
-    min-height: 93vh;
+    min-height: 97vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -2878,7 +2878,7 @@ img {
     align-items: center;
     text-align: center;
     padding-bottom: 5rem;
-    transform: translateY(-80px);
+    transform: translateY(-120px);
   }
 
   .hero-actions {
