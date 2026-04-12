@@ -3372,6 +3372,15 @@ img {
   color: transparent;
 }
 
+@media (min-width: 769px) {
+  .form-col-modern input[type="date"]:not(.has-value) {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .date-placeholder {
+    display: none !important;
+  }
+}
+
 .form-col-modern input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 0.6;
