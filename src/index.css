@@ -516,7 +516,7 @@ h6,
     align-items: center;
     text-align: center;
     height: 100%;
-    transform: translateY(-120px);
+    transform: translateY(-150px);
   }
   
   .hero-subtext {
@@ -2614,7 +2614,7 @@ h6,
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    transform: translateY(-120px);
+    transform: translateY(-150px);
   }
 
   .hero-subtext {
@@ -2878,7 +2878,7 @@ img {
     align-items: center;
     text-align: center;
     padding-bottom: 5rem;
-    transform: translateY(-120px);
+    transform: translateY(-150px);
   }
 
   .hero-actions {
