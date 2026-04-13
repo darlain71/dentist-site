@@ -10,6 +10,16 @@
     <title>dentist-site</title>
   </head>
   <body>
+    <!-- Hidden Netlify form for bot detection (must mirror React form fields) -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="treatment" />
+      <input type="date" name="date" />
+      <input type="text" name="timeSlot" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

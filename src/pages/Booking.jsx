@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 const CustomSelect = ({ label, options, placeholder, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,8 +38,16 @@ const CustomSelect = ({ label, options, placeholder, value, onChange }) => {
   );
 };
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const Booking = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [treatment, setTreatment] = useState('');
   const [timeSlot, setTimeSlot] = useState('');
 
@@ -50,26 +58,36 @@ const Booking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError(false);
 
-    const emailAddress = "asinorc71@gmail.com";
-    const subject = `New Appointment Request from ${name}`;
-
-    const body = `New Appointment Request 🦷\n\n` +
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone}\n` +
-      `Treatment: ${treatment || 'Not specified'}\n` +
-      `Preferred Date: ${date}\n` +
-      `Preferred Time: ${timeSlot || 'Not specified'}\n`;
-
-    const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Open default mail client
-    window.location.href = mailtoUrl;
-
-    // Still show the success UI locally
-    setSubmitted(true);
-    window.scrollTo(0, 0);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'booking',
+        name,
+        email,
+        phone,
+        treatment: treatment || 'Not specified',
+        date,
+        timeSlot: timeSlot || 'Not specified',
+      }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          setSubmitted(true);
+          window.scrollTo(0, 0);
+        } else {
+          setSubmitError(true);
+        }
+      })
+      .catch(() => {
+        setSubmitError(true);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   const services = [
@@ -97,7 +115,7 @@ const Booking = () => {
           </div>
           <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: '700' }}>Booking Received!</h1>
           <p style={{ color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
-            Thank you for choosing LifeDent. One of our specialists will call you shortly to confirm your preferred time and finalize your appointment.
+            Thank you for choosing Dental Signature. One of our specialists will call you shortly to confirm your preferred time and finalize your appointment.
           </p>
           <Link 
             to="/"
@@ -125,12 +143,32 @@ const Booking = () => {
           and our team will be in touch shortly to confirm your visit.
         </p>
         
-        <form className="booking-form-modern" onSubmit={handleSubmit}>
+        <form
+          className="booking-form-modern"
+          name="booking"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+        >
+          {/* Hidden fields for Netlify */}
+          <input type="hidden" name="form-name" value="booking" />
+          <p hidden>
+            <label>
+              Don't fill this out: <input name="bot-field" />
+            </label>
+          </p>
+
+          {/* Hidden inputs to capture custom select values */}
+          <input type="hidden" name="treatment" value={treatment} />
+          <input type="hidden" name="timeSlot" value={timeSlot} />
+
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Name</label>
               <input 
                 type="text" 
+                name="name"
                 placeholder="Enter your name" 
                 required 
                 value={name}
@@ -141,6 +179,7 @@ const Booking = () => {
               <label>Email</label>
               <input 
                 type="email" 
+                name="email"
                 placeholder="Enter your Email" 
                 required 
                 value={email}
@@ -154,6 +193,7 @@ const Booking = () => {
               <label>Phone Number</label>
               <input 
                 type="tel" 
+                name="phone"
                 placeholder="Enter number" 
                 required 
                 value={phone}
@@ -177,6 +217,7 @@ const Booking = () => {
               <div className="date-input-wrapper">
                 <input 
                   type="date" 
+                  name="date"
                   required 
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
@@ -196,10 +237,39 @@ const Booking = () => {
             </div>
           </div>
 
+          {/* Error feedback message */}
+          {submitError && (
+            <div className="form-feedback-error" style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              padding: '1rem 1.25rem',
+              background: '#fef2f2',
+              border: '1px solid #fecaca',
+              borderRadius: '12px',
+              color: '#dc2626',
+              fontSize: '0.95rem',
+              marginTop: '0.5rem',
+              animation: 'fadeInUp 0.3s ease'
+            }}>
+              <AlertCircle size={20} />
+              <span>Something went wrong. Please try again or call us directly at <a href="tel:0535516633" style={{ color: '#dc2626', fontWeight: '600' }}>053 551 6633</a>.</span>
+            </div>
+          )}
+
           <div className="form-footer-modern">
-            <button type="submit" className="modern-book-btn">
-              <span>Book Appointment</span>
-              <ArrowRight size={20} />
+            <button type="submit" className="modern-book-btn" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 size={20} className="spin-icon" />
+                  <span>Sending...</span>
+                </>
+              ) : (
+                <>
+                  <span>Book Appointment</span>
+                  <ArrowRight size={20} />
+                </>
+              )}
             </button>
           </div>
         </form>
