@@ -333,20 +333,23 @@ const Booking = () => {
           <div className="form-row-modern">
             <div className="form-col-modern">
               <label>Preferred Date</label>
-              <div className="date-input-wrapper">
+              <div 
+                className="date-input-wrapper" 
+                onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+                style={{ cursor: 'pointer' }}
+              >
                 <input 
-                  type="date" 
+                  type="text" 
                   name="date"
+                  placeholder="select date"
                   required 
+                  readOnly
                   value={date}
-                  onChange={(e) => setDate(e.target.value)}
                   className={date ? 'has-value' : ''}
                 />
-                {!date && <span className="date-mobile-placeholder">select date</span>}
                 <Calendar 
-                  className="calendar-icon-desktop" 
+                  className="calendar-icon-trigger" 
                   size={20} 
-                  onClick={() => setIsCalendarOpen(!isCalendarOpen)}
                 />
                 
                 {isCalendarOpen && (
