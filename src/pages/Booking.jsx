@@ -54,16 +54,6 @@ const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
     onClose();
   };
 
-  const handleSet = () => {
-    if (tempSelectedDate) {
-      const year = tempSelectedDate.getFullYear();
-      const month = String(tempSelectedDate.getMonth() + 1).padStart(2, '0');
-      const day = String(tempSelectedDate.getDate()).padStart(2, '0');
-      onSelect(`${year}-${month}-${day}`);
-    }
-    onClose();
-  };
-
   const renderDays = () => {
     const month = currentDate.getMonth();
     const year = currentDate.getFullYear();
@@ -126,8 +116,7 @@ const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
 
       <div className="calendar-actions">
         <button type="button" onClick={handleClear} className="action-btn clear">Clear</button>
-        <button type="button" onClick={onClose} className="action-btn cancel">Cancel</button>
-        <button type="button" onClick={handleSet} className="action-btn set">Set</button>
+        <button type="button" onClick={onClose} className="action-btn cancel">Close</button>
       </div>
     </div>
   );
