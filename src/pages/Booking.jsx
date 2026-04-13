@@ -17,6 +17,18 @@ const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
   const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
   const firstDayOfMonth = (month, year) => new Date(year, month, 1).getDay();
 
+  // Sync temp selection with prop whenever modal opens or prop changes
+  React.useEffect(() => {
+    if (selectedDate) {
+      const d = new Date(selectedDate);
+      setTempSelectedDate(d);
+      setCurrentDate(d);
+    } else {
+      setTempSelectedDate(null);
+      setCurrentDate(new Date());
+    }
+  }, [selectedDate]);
+
   const handlePrevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1));
   };
@@ -166,6 +178,13 @@ const Booking = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
+
+  const formatDateForDisplay = (dateString) => {
+    if (!dateString) return '';
+    const d = new Date(dateString);
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+  };
 
   const clearForm = () => {
     setName('');
@@ -340,13 +359,13 @@ const Booking = () => {
               >
                 <input 
                   type="text" 
-                  name="date"
                   placeholder="select date"
                   required 
                   readOnly
-                  value={date}
+                  value={formatDateForDisplay(date)}
                   className={date ? 'has-value' : ''}
                 />
+                <input type="hidden" name="date" value={date} />
                 <Calendar 
                   className="calendar-icon-trigger" 
                   size={20} 
