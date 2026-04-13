@@ -3,7 +3,117 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
-import { ArrowRight, ChevronDown, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, AlertCircle, Loader2, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [tempSelectedDate, setTempSelectedDate] = useState(selectedDate ? new Date(selectedDate) : null);
+
+  const months = [
+    "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+    "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+  ];
+
+  const daysInMonth = (month, year) => new Date(year, month + 1, 0).getDate();
+  const firstDayOfMonth = (month, year) => new Date(year, month, 1).getDay();
+
+  const handlePrevMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1));
+  };
+
+  const handleDateClick = (day) => {
+    const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+    setTempSelectedDate(newDate);
+  };
+
+  const handleClear = () => {
+    setTempSelectedDate(null);
+    onSelect('');
+    onClose();
+  };
+
+  const handleSet = () => {
+    if (tempSelectedDate) {
+      const year = tempSelectedDate.getFullYear();
+      const month = String(tempSelectedDate.getMonth() + 1).padStart(2, '0');
+      const day = String(tempSelectedDate.getDate()).padStart(2, '0');
+      onSelect(`${year}-${month}-${day}`);
+    }
+    onClose();
+  };
+
+  const renderDays = () => {
+    const month = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+    const days = [];
+    const firstDay = firstDayOfMonth(month, year);
+    const totalDays = daysInMonth(month, year);
+
+    // Adjust first day to start from Monday (0: Sun -> 6: Mon)
+    // Image shows M T W T F S S
+    const offset = firstDay === 0 ? 6 : firstDay - 1;
+
+    for (let i = 0; i < offset; i++) {
+      days.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
+    }
+
+    for (let day = 1; day <= totalDays; day++) {
+      const isSelected = tempSelectedDate && 
+        tempSelectedDate.getDate() === day && 
+        tempSelectedDate.getMonth() === month && 
+        tempSelectedDate.getFullYear() === year;
+
+      // Randomly add dots for the aesthetic match
+      const hasDots = (day + month) % 3 === 0;
+      const dotsCount = (day % 3) + 1;
+
+      days.push(
+        <div 
+          key={day} 
+          className={`calendar-day ${isSelected ? 'active' : ''}`}
+          onClick={() => handleDateClick(day)}
+        >
+          <span className="day-number">{day}</span>
+          <div className="day-dots">
+            {hasDots && Array.from({ length: dotsCount }).map((_, i) => (
+              <span key={i} className={`dot dot-${i % 3}`}></span>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    return days;
+  };
+
+  return (
+    <div className="custom-calendar-popup">
+      <div className="calendar-header">
+        <button type="button" onClick={handlePrevMonth} className="nav-btn"><ChevronLeft size={20} /></button>
+        <span className="month-name">{months[currentDate.getMonth()]}</span>
+        <button type="button" onClick={handleNextMonth} className="nav-btn"><ChevronRight size={20} /></button>
+      </div>
+
+      <div className="calendar-weekdays">
+        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+      </div>
+
+      <div className="calendar-grid">
+        {renderDays()}
+      </div>
+
+      <div className="calendar-actions">
+        <button type="button" onClick={handleClear} className="action-btn clear">Clear</button>
+        <button type="button" onClick={onClose} className="action-btn cancel">Cancel</button>
+        <button type="button" onClick={handleSet} className="action-btn set">Set</button>
+      </div>
+    </div>
+  );
+};
 
 const CustomSelect = ({ label, options, placeholder, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +160,7 @@ const Booking = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [treatment, setTreatment] = useState('');
   const [timeSlot, setTimeSlot] = useState('');
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -232,6 +343,19 @@ const Booking = () => {
                   className={date ? 'has-value' : ''}
                 />
                 {!date && <span className="date-mobile-placeholder">select date</span>}
+                <Calendar 
+                  className="calendar-icon-desktop" 
+                  size={20} 
+                  onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+                />
+                
+                {isCalendarOpen && (
+                  <CustomCalendar 
+                    selectedDate={date} 
+                    onSelect={setDate} 
+                    onClose={() => setIsCalendarOpen(false)} 
+                  />
+                )}
               </div>
             </div>
             <div className="form-col-modern">
