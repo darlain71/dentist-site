@@ -56,6 +56,15 @@ const Booking = () => {
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
 
+  const clearForm = () => {
+    setName('');
+    setEmail('');
+    setPhone('');
+    setTreatment('');
+    setDate('');
+    setTimeSlot('');
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -77,7 +86,9 @@ const Booking = () => {
       .then((res) => {
         if (res.ok) {
           setSubmitted(true);
-          window.scrollTo(0, 0);
+          clearForm();
+          // Hide success message after 10 seconds
+          setTimeout(() => setSubmitted(false), 10000);
         } else {
           setSubmitError(true);
         }
@@ -106,35 +117,32 @@ const Booking = () => {
     'Evening (4:00 PM - 7:00 PM)'
   ];
 
-  if (submitted) {
-    return (
-      <div className="booking-page-container" style={{ padding: '8rem 5% 4rem' }}>
-        <div className="booking-success-card" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center', background: '#fff', padding: '3rem', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
-          <div style={{ marginBottom: '2rem', color: '#10b981' }}>
-            <CheckCircle size={80} strokeWidth={1.5} />
-          </div>
-          <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: '700' }}>Booking Received!</h1>
-          <p style={{ color: '#666', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
-            Thank you for choosing Dental Signature. One of our specialists will call you shortly to confirm your preferred time and finalize your appointment.
-          </p>
-          <Link 
-            to="/"
-            className="book-appointment-btn"
-            style={{ margin: '0 auto', display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}
-          >
-            <span>Return Home</span>
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="booking-page-container">
       <Helmet>
         <title>Make your Booking | LifeDent</title>
       </Helmet>
+
+      {/* Success Popup */}
+      {submitted && (
+        <div className="success-popup-overlay">
+          <div className="success-popup-content">
+            <div className="success-popup-icon">
+              <CheckCircle size={48} strokeWidth={1.5} />
+            </div>
+            <div className="success-popup-text">
+              <h3>Booking Received!</h3>
+              <p>One of our specialists will call you shortly to confirm your appointment.</p>
+            </div>
+            <button 
+              className="success-popup-close"
+              onClick={() => setSubmitted(false)}
+            >
+              Okay, got it
+            </button>
+          </div>
+        </div>
+      )}
 
       <section className="booking-form-section">
         <h1 className="booking-form-title">Make your Booking</h1>
