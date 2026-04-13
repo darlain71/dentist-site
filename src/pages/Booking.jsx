@@ -40,6 +40,12 @@ const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
   const handleDateClick = (day) => {
     const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
     setTempSelectedDate(newDate);
+    
+    // Immediately update the parent state so it appears in the input box
+    const year = newDate.getFullYear();
+    const month = String(newDate.getMonth() + 1).padStart(2, '0');
+    const dayStr = String(newDate.getDate()).padStart(2, '0');
+    onSelect(`${year}-${month}-${dayStr}`);
   };
 
   const handleClear = () => {
