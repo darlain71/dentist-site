@@ -2473,9 +2473,9 @@ h6,
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid #eaeaea;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .new-stat-item {
