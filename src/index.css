@@ -1445,6 +1445,11 @@ h6,
   line-height: 1.1;
 }
 
+.testimonials-modern .section-desc-universal {
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
 .testimonials-main-layout {
   display: flex;
   align-items: center;
@@ -1588,6 +1593,9 @@ h6,
 }
 
 @media (max-width: 992px) {
+  .testimonials-modern .section-desc-universal {
+    margin-bottom: 0.75rem;
+  }
   .testimonials-main-layout { flex-direction: column; gap: 0; align-items: center; }
   .testimonials-selector-area { 
     width: 100%; 
@@ -1607,7 +1615,7 @@ h6,
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
   .avatar-item {
     position: static !important;
@@ -1637,7 +1645,7 @@ h6,
     display: flex;
     justify-content: center;
     gap: 0.4rem;
-    margin-top: 0.25rem;
+    margin-top: 0;
   }
   .dot {
     width: 5px;
@@ -1672,7 +1680,7 @@ h6,
     align-items: center; 
     width: 100%; 
     max-width: 800px;
-    margin: 0.5rem auto 0;
+    margin: 0 auto 0;
   }
   .quote-mark { 
     font-size: 4rem; 
