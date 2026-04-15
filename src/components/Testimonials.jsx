@@ -59,11 +59,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="testimonials-section" id="testimonials">
+    <section className="testimonials-section site-section" id="testimonials">
       <div className="testimonials-header">
         <div className="testimonials-title-container">
-          <h2 className="testimonials-title">What Our Patients Say</h2>
-          <p className="testimonials-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <h2 className="section-title-universal">What Our Patients Say</h2>
+          <p className="section-desc-universal" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <span>⭐ 5.0 Rating on Google Reviews.</span>
             Read our verified patient experiences below.
           </p>

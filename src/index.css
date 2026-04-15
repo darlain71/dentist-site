@@ -146,6 +146,12 @@
   --text-sub: rgba(255, 255, 255, 0.75);
   --glass-bg: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --section-padding-desktop: 10rem;
+  --section-padding-mobile: 6rem;
+  --heading-p-gap-desktop: 2rem;
+  --heading-p-gap-mobile: 1.25rem;
+  --p-content-gap-desktop: 4rem;
+  --p-content-gap-mobile: 2.5rem;
 }
 
 * {
@@ -163,13 +169,15 @@ body {
 }
 
 .site-section {
-  padding: 6rem 5% !important;
+  padding: var(--section-padding-desktop) 5% !important;
   background-color: #ffffff !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 @media (max-width: 767px) {
   .site-section {
-    padding: 4rem 5% !important;
+    padding: var(--section-padding-mobile) 5% !important;
   }
 }
 
@@ -178,7 +186,7 @@ body {
   font-weight: 500;
   line-height: 1.1;
   color: #1a1a1a;
-  margin-bottom: 2rem;
+  margin-bottom: var(--heading-p-gap-desktop);
   letter-spacing: -0.03em;
   font-family: var(--font-heading);
 }
@@ -187,25 +195,25 @@ body {
   color: #666;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2.5rem;
-  max-width: 600px;
+  margin-bottom: var(--p-content-gap-desktop);
+  max-width: 650px;
 }
 
 @media (max-width: 767px) {
   .section-title-universal {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: var(--heading-p-gap-mobile);
   }
   .section-desc-universal {
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--p-content-gap-mobile);
     max-width: 100%;
   }
 }
 
 .section-cta-container {
-  text-align: center;
-  margin-top: 3rem;
+  text-align: left;
+  margin-top: 0;
 }
 
 .section-btn-universal {
@@ -1099,9 +1107,7 @@ h6,
 
 /* Works Section */
 .works-section {
-  background-color: #ffffff;
   color: #1a1a1a;
-  padding: 4rem 5%;
 }
 
 .works-grid {
@@ -1313,7 +1319,6 @@ h6,
 .testimonials-section {
   background-color: #ffffff;
   color: #1a1a1a;
-  padding: 2rem 5%;
 }
 
 .testimonials-header {
@@ -3090,7 +3095,6 @@ img {
 
 /* Partner Section Styles */
 .partner-section {
-  padding: 3rem 0;
   background-color: #ffffff;
   text-align: center;
   position: relative;
@@ -3207,7 +3211,6 @@ img {
 
 /* Gallery Section Styles */
 .product-section {
-  padding: 6rem 1.5rem;
   background-color: #ffffff;
 }
 
@@ -3258,10 +3261,6 @@ img {
 }
 
 @media (max-width: 767px) {
-  .product-section {
-    padding: 4rem 1rem;
-  }
-
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;

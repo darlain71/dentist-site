@@ -45,9 +45,9 @@ const About = () => {
         <meta name="description" content="Meet Dr. Kofi Ansah and Dr. Kojo Nti at LifeDent. We provide top-tier dental care in East Legon and Oyarifa." />
       </Helmet>
       {/* Top Header Section */}
-      <section className="new-about-header">
-        <h1 className="new-about-title">About Us</h1>
-        <p className="new-about-desc">
+      <section className="new-about-header site-section">
+        <h1 className="section-title-universal">About Us</h1>
+        <p className="section-desc-universal">
           We are committed to creating a safe and comfortable environment
           where you can receive top-tier dental care, achieve a beautiful smile,
           and maintain lasting oral health.
@@ -84,21 +84,21 @@ const About = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="new-about-mission-section">
+      <section className="new-about-mission-section site-section">
         <div className="new-mission-left">
-          <h2 className="new-mission-heading">Empowering Your<br/>Best Smile</h2>
+          <h2 className="section-title-universal">Empowering Your<br/>Best Smile</h2>
         </div>
         <div className="new-mission-right">
           <div className="new-mission-block">
             <h4 className="new-mission-label">OUR VISION</h4>
-            <p className="new-mission-text">
+            <p className="section-desc-universal">
               To be the leading dental clinic, providing accessible, compassionate, and advanced care for oral health and well-being worldwide.
             </p>
           </div>
           <div className="new-mission-divider"></div>
           <div className="new-mission-block">
             <h4 className="new-mission-label">OUR MISSION</h4>
-            <p className="new-mission-text">
+            <p className="section-desc-universal">
               To support individuals in achieving confident smiles through tailored treatments and education, ensuring everyone has access to professional dental care.
             </p>
           </div>
@@ -106,11 +106,11 @@ const About = () => {
       </section>
 
       {/* Services and Specialists Sections */}
-      <section className="works-section" style={{padding: '6rem 0'}}>
+      <section className="works-section site-section">
         <div className="works-grid">
           <div className="works-col-left">
-             <h2 className="works-title">Dental Services</h2>
-             <p className="works-desc">Comprehensive care for all your dental needs.</p>
+             <h2 className="section-title-universal">Dental Services</h2>
+             <p className="section-desc-universal">Comprehensive care for all your dental needs.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid">
@@ -138,10 +138,10 @@ const About = () => {
           </div>
         </div>
 
-        <div className="works-grid" style={{marginTop: '6rem'}}>
+        <div className="works-grid" style={{marginTop: 'var(--section-padding-desktop)'}}>
           <div className="works-col-left">
-             <h2 className="works-title">Meet Our Team</h2>
-             <p className="works-desc">Experienced professionals dedicated to your smile.</p>
+             <h2 className="section-title-universal">Meet Our Team</h2>
+             <p className="section-desc-universal">Experienced professionals dedicated to your smile.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>

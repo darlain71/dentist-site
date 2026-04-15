@@ -189,9 +189,9 @@ const Home = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="partner-section">
-        <h2 className="partner-title">Our Trusted Partners</h2>
-        <p className="partner-description">
+      <section className="partner-section site-section">
+        <h2 className="section-title-universal" style={{ textAlign: 'center', margin: '0 auto var(--heading-p-gap-desktop)' }}>Our Trusted Partners</h2>
+        <p className="section-desc-universal" style={{ textAlign: 'center', margin: '0 auto var(--p-content-gap-desktop)' }}>
           We collaborate with world-class dental brands to ensure you receive 
           the highest quality materials and technology for your smile.
         </p>

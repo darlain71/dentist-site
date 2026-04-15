@@ -28,11 +28,11 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="faq-section">
+    <section className="faq-section site-section">
       <div className="faq-container">
         <div className="faq-header-container">
-          <h2 className="faq-title">Frequently Asked Questions</h2>
-          <p className="faq-desc">Our friendly team would love to answer your questions.</p>
+          <h2 className="section-title-universal">Frequently Asked Questions</h2>
+          <p className="section-desc-universal">Our friendly team would love to answer your questions.</p>
         </div>
 
         <div className="faq-list">
