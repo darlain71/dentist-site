@@ -147,11 +147,11 @@
   --glass-bg: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.1);
   --section-padding-desktop: 10rem;
-  --section-padding-mobile: 6rem;
+  --section-padding-mobile: 4.5rem;
   --heading-p-gap-desktop: 2rem;
   --heading-p-gap-mobile: 1.25rem;
   --p-content-gap-desktop: 4rem;
-  --p-content-gap-mobile: 2.5rem;
+  --p-content-gap-mobile: 2.25rem;
 }
 
 * {
@@ -2820,7 +2820,8 @@ h6,
   }
 
   .about-col-left {
-    display: none;
+    display: flex;
+    justify-content: center;
   }
 
   /* Hide decorative side images on tablet */
@@ -2984,85 +2985,46 @@ img {
   }
 }
 
-/* Universal Responsive Adjustments for Mobile / Small Devices */
-@media (max-width: 480px) {
+/* Consolidated Mobile Styles (767px and below) */
+@media (max-width: 767px) {
   .hero-section {
-    min-height: 97vh;
+    min-height: 85vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   .hero-content {
-    margin-top: 0 !important;
-    padding-top: 0;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5rem;
-    transform: translateY(-150px);
-  }
-
-  .hero-actions {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .title-row {
-    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 
   .hero-title {
-    font-size: 2.8rem !important;
+    font-size: 2.75rem !important;
     line-height: 1.1;
+    color: #ffffff !important;
   }
 
   .hero-subtext {
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9) !important;
     text-align: center;
+    max-width: 100%;
   }
 
+  .about-grid,
+  .works-grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Universal section heading fix for mobile */
+  .section-title-universal,
   .about-title,
   .works-title,
   .testimonials-title,
   .product-heading,
-  .story-title,
-  .services-title {
-    font-size: 2rem !important;
-  }
-
-  .about-section,
-  .services-section,
-  .works-section,
-  .testimonials-section,
-  .product-section,
-  .about-story-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .stats-number {
-    font-size: 3rem;
-  }
-
-  .book-appointment-btn,
-  .about-btn,
-  .works-btn,
-  .services-btn {
-    padding: 0.6rem 1.25rem;
-    font-size: 0.9rem;
-    width: fit-content;
-    align-self: center;
-    justify-content: center;
-  }
-
-  .works-images-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
   }
 
   .trust-banner-inner {
@@ -3549,7 +3511,7 @@ img {
 
 @media (max-width: 767px) {
   .booking-form-section {
-    padding: 7rem 1.25rem 4rem;
+    padding: 5rem 1.25rem 4rem;
   }
 
   .form-row-modern {
@@ -3767,10 +3729,11 @@ img {
 
 @media (max-width: 480px) {
   .custom-calendar-popup {
-    width: 290px;
+    width: 310px;
     right: 50%;
     transform: translateX(50%);
     left: auto;
+    padding: 1rem;
   }
 }
 
