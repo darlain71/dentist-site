@@ -1671,7 +1671,7 @@ h6,
   }
 
   .testimonial-quote-area { 
-    padding: 1rem 0; 
+    padding: 0 0 1rem 0; 
     background-color: transparent;
     border-radius: 0;
     border: none;
