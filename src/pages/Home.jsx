@@ -89,46 +89,117 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section site-section" id="gallery">
-        <div className="product-container">
-          <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 className="section-title-universal">
-              Real Results, Real Smiles
-            </h2>
-            <p className="section-desc-universal" style={{ margin: '0 auto' }}>
-              See the difference our professional dental care makes. From teeth whitening to <br />
-              complete smile makeovers, our results speak for themselves.
+      {/* Real Results Section - Bento Grid Redesign */}
+      <section className="product-section site-section" id="results">
+        <div className="product-header-bento">
+          <h2 className="section-title-universal">Real Results,<br />Real Smiles</h2>
+          <div className="header-desc-container">
+            <p className="section-desc-universal">
+              From daily essentials to timeless care, explore how our treatments
+              have transformed smiles and lives naturally and beautifully.
             </p>
           </div>
-          <div className="gallery-grid">
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Teeth Whitening Before and After" className="gallery-img" />
-              <div className="gallery-content">
-                <h3>Professional Teeth Whitening</h3>
-                <p>A brighter, more confident smile in just one session.</p>
+        </div>
+
+        <div className="bento-grid">
+          {/* Left Column: Small Info Cards */}
+          <div className="bento-col-small">
+            <div className="bento-card xsmall bg-sage">
+              <span className="bento-label">Patient Experience</span>
+              <h3 className="bento-box-title">Why We Strive<br />For Excellence.</h3>
+              <div className="bento-arrow">
+                <span>Learn More</span>
+                <ArrowRight size={16} className="diagonal-arrow" />
               </div>
             </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Dental Care" className="gallery-img" />
-              <div className="gallery-content">
-                <h3>Complete Check-ups</h3>
-                <p>Comprehensive exams tracking your oral health over time.</p>
-              </div>
+            <div className="bento-card xsmall bg-cream">
+              <h3 className="bento-box-title color-olive">Giving Back<br />to Your Smile.</h3>
+              <ArrowRight size={18} className="simple-arrow color-olive" />
             </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Dental Surgery" className="gallery-img" />
-              <div className="gallery-content">
-                <h3>Advanced Procedures</h3>
-                <p>Safe, comfortable, and effective treatments.</p>
+            <div className="bento-card xsmall bg-tan">
+              <h3 className="bento-box-title color-earth">Practical Steps for<br />Healthier Teeth.</h3>
+              <ArrowRight size={18} className="simple-arrow color-earth" />
+            </div>
+          </div>
+
+          {/* Center Column: Tall Image Card */}
+          <div className="bento-card tall img-card">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Care" className="bento-img" />
+            <div className="bento-img-overlay">
+              <div className="bento-tag">
+                <div className="tag-icon">✨</div>
+                <span>Professional Care</span>
+              </div>
+              <div className="bento-img-content">
+                <h3 className="bento-img-title">Crafted for a<br />Confident Life.</h3>
+                <div className="bento-round-btn">
+                  <ArrowRight size={20} className="diagonal-arrow" />
+                </div>
               </div>
             </div>
           </div>
-          
-          <div className="section-cta-container">
-             <Link to="/booking" className="section-btn-universal">
-                <span>Book Your Consultation</span>
-                <ArrowRight className="btn-icon" size={16} />
-              </Link>
+
+          {/* Right Column: Horizontal Image Cards */}
+          <div className="bento-col-right">
+            <div className="bento-card horizontal img-card">
+              <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening" className="bento-img" />
+              <div className="bento-img-overlay">
+                 <div className="bento-tag">
+                  <div className="tag-icon">🦷</div>
+                  <span>Aesthetics</span>
+                </div>
+                <div className="bento-img-content">
+                  <h3 className="bento-img-title small">Science Meets<br />Smile Artistry.</h3>
+                  <div className="bento-round-btn small">
+                    <ArrowRight size={16} className="diagonal-arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bento-card horizontal img-card">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Restoration" className="bento-img" />
+              <div className="bento-img-overlay">
+                 <div className="bento-tag">
+                  <div className="tag-icon">🌿</div>
+                  <span>Restoring</span>
+                </div>
+                <div className="bento-img-content">
+                  <h3 className="bento-img-title small">Pure, Gentle,<br />Lasting Smile.</h3>
+                  <div className="bento-round-btn small">
+                    <ArrowRight size={16} className="diagonal-arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Feature Card */}
+        <div className="bento-feature-card bg-olive-soft">
+          <div className="feature-img-wrapper">
+             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Clinic" className="feature-img" />
+             <div className="play-button">
+               <div className="play-icon">▶</div>
+             </div>
+             <div className="feature-tags">
+               <span>#ExpertCare</span>
+               <span>#ModernTech</span>
+               <span>#LifeDent</span>
+             </div>
+          </div>
+          <div className="feature-content">
+            <h2 className="feature-title">Make Every Visit<br />Simple, Calm,<br />and Effective</h2>
+            <p className="feature-text">
+              Ready to experience dental care differently? Explore our modern 
+              approach, painless solutions, and sustainable standards. Make small 
+              changes today that create a lasting impact on your oral health.
+            </p>
+            <Link to="/booking" className="feature-btn">
+              <span>Book Appointment</span>
+              <div className="round-btn-mini">
+                <ArrowRight size={14} className="diagonal-arrow" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
