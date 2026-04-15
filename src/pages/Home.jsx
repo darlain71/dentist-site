@@ -102,72 +102,38 @@ const Home = () => {
         </div>
 
         <div className="bento-grid">
-          {/* Left Column: Small Info Cards */}
+          {/* Left Column: Small Info Cards (Now simplified accent blocks) */}
           <div className="bento-col-small">
-            <div className="bento-card xsmall bg-sage">
-              <span className="bento-label">Patient Experience</span>
-              <h3 className="bento-box-title">Why We Strive<br />For Excellence.</h3>
-              <div className="bento-arrow">
-                <span>Learn More</span>
-                <ArrowRight size={16} className="diagonal-arrow" />
-              </div>
-            </div>
-            <div className="bento-card xsmall bg-cream">
-              <h3 className="bento-box-title color-olive">Giving Back<br />to Your Smile.</h3>
-              <ArrowRight size={18} className="simple-arrow color-olive" />
-            </div>
-            <div className="bento-card xsmall bg-tan">
-              <h3 className="bento-box-title color-earth">Practical Steps for<br />Healthier Teeth.</h3>
-              <ArrowRight size={18} className="simple-arrow color-earth" />
-            </div>
+            <div className="bento-card xsmall bg-sage"></div>
+            <div className="bento-card xsmall bg-cream"></div>
+            <div className="bento-card xsmall bg-tan"></div>
           </div>
 
-          {/* Center Column: Tall Image Card */}
+          {/* Center Column: Tall Image Card (No tags or arrows) */}
           <div className="bento-card tall img-card">
             <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dental Care" className="bento-img" />
             <div className="bento-img-overlay">
-              <div className="bento-tag">
-                <div className="tag-icon">✨</div>
-                <span>Professional Care</span>
-              </div>
               <div className="bento-img-content">
                 <h3 className="bento-img-title">Crafted for a<br />Confident Life.</h3>
-                <div className="bento-round-btn">
-                  <ArrowRight size={20} className="diagonal-arrow" />
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Horizontal Image Cards */}
+          {/* Right Column: Horizontal Image Cards (No tags or arrows) */}
           <div className="bento-col-right">
             <div className="bento-card horizontal img-card">
               <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Whitening" className="bento-img" />
               <div className="bento-img-overlay">
-                 <div className="bento-tag">
-                  <div className="tag-icon">🦷</div>
-                  <span>Aesthetics</span>
-                </div>
                 <div className="bento-img-content">
                   <h3 className="bento-img-title small">Science Meets<br />Smile Artistry.</h3>
-                  <div className="bento-round-btn small">
-                    <ArrowRight size={16} className="diagonal-arrow" />
-                  </div>
                 </div>
               </div>
             </div>
             <div className="bento-card horizontal img-card">
               <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Restoration" className="bento-img" />
               <div className="bento-img-overlay">
-                 <div className="bento-tag">
-                  <div className="tag-icon">🌿</div>
-                  <span>Restoring</span>
-                </div>
                 <div className="bento-img-content">
                   <h3 className="bento-img-title small">Pure, Gentle,<br />Lasting Smile.</h3>
-                  <div className="bento-round-btn small">
-                    <ArrowRight size={16} className="diagonal-arrow" />
-                  </div>
                 </div>
               </div>
             </div>
@@ -196,9 +162,6 @@ const Home = () => {
             </p>
             <Link to="/booking" className="feature-btn">
               <span>Book Appointment</span>
-              <div className="round-btn-mini">
-                <ArrowRight size={14} className="diagonal-arrow" />
-              </div>
             </Link>
           </div>
         </div>
