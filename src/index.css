@@ -3288,7 +3288,7 @@ img {
 
 .bento-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -3384,12 +3384,32 @@ img {
 .bento-img-overlay {
   position: absolute;
   inset: 0;
-  padding: 1.75rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+  padding: 2.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 30%, transparent 70%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: #ffffff;
+}
+
+.bottom-aligned .bento-img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.bento-category-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.bento-category-label.small {
+  font-size: 0.75rem;
 }
 
 .bento-tag {
