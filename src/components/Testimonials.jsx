@@ -78,10 +78,20 @@ const Testimonials = () => {
                 );
               })}
             </div>
+
+            <div className="pagination-dots">
+              {testimonialsData.map((_, idx) => (
+                <div 
+                  key={idx} 
+                  className={`dot ${idx === activeIndex ? 'active' : ''}`}
+                  onClick={() => rotateTestimonials(idx)}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Right Side: Main Quote Area */}
-          <div className="testimonial-quote-area">
+          <div className="testimonial-quote-area" data-author={testimonialsData[activeIndex].author}>
              <div className="quote-mark">“</div>
              <div className="quote-text-container">
                 <p className="main-quote-paragraph">
