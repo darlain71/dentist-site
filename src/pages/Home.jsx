@@ -137,23 +137,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Bottom Feature Section - No Card Background */}
-        <div className="bento-feature-no-card">
-          <div className="feature-img-wrapper">
-             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Clinic" className="feature-img" />
-             <div className="play-button">
-               <div className="play-icon">▶</div>
-             </div>
-          </div>
-          <div className="feature-content">
-            <h2 className="feature-title">Make Every Visit<br />Simple, Calm,<br />and Effective</h2>
-            <p className="feature-text">
-              Ready to experience dental care differently? Explore our modern 
-              approach, painless solutions, and sustainable standards. Make small 
-              changes today that create a lasting impact on your oral health.
-            </p>
-          </div>
-        </div>
+
       </section>
 
       <section className="works-section site-section" id="services">
