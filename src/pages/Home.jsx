@@ -137,16 +137,7 @@ const Home = () => {
         <div className="works-grid">
           <div className="works-col-left">
             <div className="works-left-top">
-              <p className="works-desc">
-                Our team of skilled and experienced dental<br />
-                professionals strives to create comfortable and<br />
-                welcoming environment for each.
-              </p>
-
-              <a href="tel:0535516633" className="works-btn black-btn" style={{ textDecoration: 'none' }}>
-                <span>Book Appointment</span>
-                <ArrowRight className="btn-icon" size={16} />
-              </a>
+              <h2 className="works-title" style={{ marginBottom: '4rem' }}>Services We Provide<br />Are Listed Below</h2>
             </div>
 
             <div className="works-avatars-container">
@@ -163,7 +154,11 @@ const Home = () => {
           </div>
 
           <div className="works-col-right">
-            <h2 className="works-title" style={{ marginBottom: '4rem' }}>Services We Provide<br />Are Listed Below</h2>
+            <p className="works-desc" style={{ marginBottom: '4rem' }}>
+              Our team of skilled and experienced dental<br />
+              professionals strives to create comfortable and<br />
+              welcoming environment for each.
+            </p>
 
             <div className="works-images-grid">
               <div className="work-card">
