@@ -148,12 +148,12 @@
   --text-sub: rgba(255, 255, 255, 0.75);
   --glass-bg: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --section-padding-desktop: 6.5rem;
-  --section-padding-mobile: 3.5rem;
-  --heading-p-gap-desktop: 1.5rem;
-  --heading-p-gap-mobile: 1.15rem;
-  --p-content-gap-desktop: 3rem;
-  --p-content-gap-mobile: 2.15rem;
+  --section-padding-desktop: 4rem;
+  --section-padding-mobile: 2.5rem;
+  --heading-p-gap-desktop: 1rem;
+  --heading-p-gap-mobile: 0.85rem;
+  --p-content-gap-desktop: 2.5rem;
+  --p-content-gap-mobile: 1.85rem;
 }
 
 * {
