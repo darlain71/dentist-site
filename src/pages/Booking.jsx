@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
-import { ArrowRight, ChevronDown, CheckCircle, AlertCircle, Loader2, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, AlertCircle, Loader2, Calendar, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 
 const CustomCalendar = ({ selectedDate, onSelect, onClose }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -416,7 +416,7 @@ const Booking = () => {
               ) : (
                 <>
                   <span>Book Appointment</span>
-                  <ArrowRight size={20} />
+                  <ArrowUpRight size={20} />
                 </>
               )}
             </button>

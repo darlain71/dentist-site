@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, ArrowRight, ArrowLeft, Star, MapPin, Award } from 'lucide-react';
+import { Phone, ArrowRight, ArrowLeft, Star, MapPin, Award, ArrowUpRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
@@ -44,10 +44,12 @@ const Home = () => {
 
           <div className="hero-actions">
             <Link to="/booking" className="hero-btn-black">
-              Book Appointment
+              <span>Book Appointment</span>
+              <ArrowUpRight size={20} />
             </Link>
             <Link to="/services" className="hero-btn-white">
-              Services
+              <span>Services</span>
+              <ArrowUpRight size={20} />
             </Link>
           </div>
         </main>
@@ -72,7 +74,7 @@ const Home = () => {
             </p>
             <Link to="/booking" className="section-btn-universal">
               <span>Book Appointment</span>
-              <ArrowRight className="btn-icon" size={16} />
+              <ArrowUpRight className="btn-icon" size={16} />
             </Link>
             <div className="about-img-center-wrapper">
               <img src="/about_center.png" alt="Dental procedure close-up" className="about-img-center" />
