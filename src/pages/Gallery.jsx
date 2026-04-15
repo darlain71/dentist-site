@@ -22,7 +22,7 @@ const Gallery = () => {
       </Helmet>
       
       {/* Top Header Section */}
-      <section className="booking-form-section site-section">
+      <section className="new-about-header site-section">
         <h1 className="new-about-title">Our Gallery</h1>
         <p className="new-about-desc">
           Take a look around our state-of-the-art clinic and see the smiles we've helped create.
