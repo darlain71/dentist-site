@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import FAQ from '../../components/FAQ';
 
 const Endodontics = () => {
@@ -11,7 +11,7 @@ const Endodontics = () => {
         <title>Endodontics & Root Canal | LifeDent</title>
         <meta name="description" content="Expert endodontic treatments and painless root canal therapy at LifeDent, Accra." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: '6rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page" style={{ padding: 'var(--section-padding-desktop) 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Endodontics (Root Canal)</h1>
           <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Endodontics" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
@@ -29,7 +29,7 @@ const Endodontics = () => {
 
           <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
             <span>Consult Our Endodontist</span>
-            <ArrowRight className="btn-icon" size={16} />
+            <ArrowUpRight className="btn-icon" size={16} />
           </Link>
         </div>
       </div>

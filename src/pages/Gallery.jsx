@@ -22,7 +22,7 @@ const Gallery = () => {
       </Helmet>
       
       {/* Top Header Section */}
-      <section className="new-about-header">
+      <section className="booking-form-section site-section">
         <h1 className="new-about-title">Our Gallery</h1>
         <p className="new-about-desc">
           Take a look around our state-of-the-art clinic and see the smiles we've helped create.
@@ -30,7 +30,7 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid Section */}
-      <section style={{ padding: '4rem 5%', maxWidth: '1400px', margin: '0 auto' }}>
+      <section style={{ padding: 'var(--section-padding-desktop) 5%', maxWidth: '1400px', margin: '0 auto' }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',

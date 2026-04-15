@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import FAQ from '../../components/FAQ';
 
 const ScaleAndPolish = () => {
@@ -11,7 +11,7 @@ const ScaleAndPolish = () => {
         <title>Scale & Polish | LifeDent</title>
         <meta name="description" content="Professional teeth cleaning, scale and polish services at LifeDent, Accra." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: '6rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page" style={{ padding: 'var(--section-padding-desktop) 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Scale & Polish</h1>
           <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Scale and Polish" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
@@ -29,7 +29,7 @@ const ScaleAndPolish = () => {
 
           <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
             <span>Book Your Cleaning</span>
-            <ArrowRight className="btn-icon" size={16} />
+            <ArrowUpRight className="btn-icon" size={16} />
           </Link>
         </div>
       </div>

@@ -269,7 +269,7 @@ const Booking = () => {
         </div>
       )}
 
-      <section className="booking-form-section">
+      <section className="booking-form-section site-section">
         <h1 className="booking-form-title">Make your Booking</h1>
         <p className="booking-form-subtitle">
           Ready for a brighter, healthier smile? Fill out the form below to request your appointment 
