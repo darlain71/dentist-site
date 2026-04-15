@@ -138,11 +138,11 @@
   transform: translate(-50%, 0.25rem);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 :root {
-  --font-heading: 'Instrument Sans', sans-serif;
-  --font-body: 'Instrument Sans', sans-serif;
+  --font-heading: 'Courier Prime', monospace;
+  --font-body: 'Courier Prime', monospace;
   --bg-color: #0b0f19;
   --text-main: #ffffff;
   --text-sub: rgba(255, 255, 255, 0.75);
