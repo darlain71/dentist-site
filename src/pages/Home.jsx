@@ -140,8 +140,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Bottom Feature Card */}
-        <div className="bento-feature-card bg-olive-soft">
+        {/* Bottom Feature Section - No Card Background */}
+        <div className="bento-feature-no-card">
           <div className="feature-img-wrapper">
              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Modern Clinic" className="feature-img" />
              <div className="play-button">
