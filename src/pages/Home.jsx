@@ -89,7 +89,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section" id="gallery">
+      <section className="product-section" id="gallery" style={{ paddingBottom: '2rem' }}>
         <div className="product-container">
           <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
@@ -133,14 +133,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="works-section" id="services">
+      <section className="works-section" id="services" style={{ paddingTop: '2rem' }}>
         <div className="works-grid">
           <div className="works-col-left">
             <div className="works-left-top">
               <h2 className="works-title" style={{ marginBottom: '4rem' }}>Services We Provide<br />Are Listed Below</h2>
             </div>
 
-            <div className="works-avatars-container">
+            <div className="works-avatars-container desktop-only-avatars">
               <div className="avatar-stack">
                 <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=150&q=80" alt="Happy member 1" className="avatar filled-avatar" />
                 <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Happy member 2" className="avatar filled-avatar" />
@@ -171,6 +171,17 @@ const Home = () => {
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Dental Implant" className="work-card-img" />
                 <h3 className="work-card-title">Dental Implant</h3>
                 <p className="work-card-desc">Improve your smile with cleaning.</p>
+                <div className="works-avatars-container mobile-only-avatars" style={{ marginTop: '2rem' }}>
+                  <div className="avatar-stack">
+                    <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=150&q=80" alt="Happy member 1" className="avatar filled-avatar" />
+                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Happy member 2" className="avatar filled-avatar" />
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Happy member" className="avatar filled-avatar" />
+                  </div>
+                  <div className="avatar-text">
+                    <span className="avatar-text-bold">10K+ happy</span><br />
+                    <span className="avatar-text-light">member</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

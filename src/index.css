@@ -1105,6 +1105,14 @@ h6,
   gap: 1.5rem;
 }
 
+@media (max-width: 992px) {
+  .desktop-only-avatars { display: none !important; }
+}
+
+@media (min-width: 993px) {
+  .mobile-only-avatars { display: none !important; }
+}
+
 .avatar-stack {
   display: flex;
   align-items: center;
