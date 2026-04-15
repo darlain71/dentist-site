@@ -1113,6 +1113,25 @@ h6,
   .mobile-only-avatars { display: none !important; }
 }
 
+.mobile-small-gap-title {
+  margin-bottom: 4rem;
+}
+.mobile-small-gap-desc {
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 992px) {
+  .mobile-small-gap-title {
+    margin-bottom: 0 !important;
+  }
+  .mobile-small-gap-desc {
+    margin-bottom: 2rem !important;
+  }
+  .works-grid.mobile-tight-grid {
+    gap: 1rem !important;
+  }
+}
+
 .avatar-stack {
   display: flex;
   align-items: center;

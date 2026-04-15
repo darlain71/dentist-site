@@ -89,7 +89,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section" id="gallery" style={{ paddingBottom: '2rem' }}>
+      <section className="product-section" id="gallery" style={{ paddingBottom: '0' }}>
         <div className="product-container">
           <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
@@ -124,8 +124,8 @@ const Home = () => {
             </div>
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-             <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+             <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '2rem' }}>
                 <span>Book Your Consultation</span>
                 <ArrowRight className="btn-icon" size={16} />
               </Link>
@@ -133,11 +133,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="works-section" id="services" style={{ paddingTop: '2rem' }}>
-        <div className="works-grid">
+      <section className="works-section" id="services" style={{ paddingTop: '0' }}>
+        <div className="works-grid mobile-tight-grid">
           <div className="works-col-left">
             <div className="works-left-top">
-              <h2 className="works-title" style={{ marginBottom: '4rem' }}>Services We Provide<br />Are Listed Below</h2>
+              <h2 className="works-title mobile-small-gap-title">Services We Provide<br />Are Listed Below</h2>
             </div>
 
             <div className="works-avatars-container desktop-only-avatars">
@@ -154,7 +154,7 @@ const Home = () => {
           </div>
 
           <div className="works-col-right">
-            <p className="works-desc" style={{ marginBottom: '4rem' }}>
+            <p className="works-desc mobile-small-gap-desc">
               Our team of skilled and experienced dental<br />
               professionals strives to create comfortable and<br />
               welcoming environment for each.
