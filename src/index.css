@@ -3737,11 +3737,7 @@ img {
 
 /* Booking Page Styles */
 .booking-form-section {
-  padding: 10rem 5% 8rem;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .booking-form-title {
