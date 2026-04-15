@@ -212,7 +212,7 @@ body {
 }
 
 .section-cta-container {
-  text-align: left;
+  text-align: center;
   margin-top: 0;
 }
 
@@ -819,27 +819,37 @@ h6,
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
   }
 
-  .about-col-left,
+  .about-col-left {
+    order: 2;
+  }
+
+  .about-col-center {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+
   .about-col-right {
+    order: 3;
     align-items: center;
     text-align: center;
   }
 
   .about-img-left,
   .about-img-right {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
   }
 
-  .stats-text {
+  .about-desc {
     max-width: 100%;
   }
 
   .about-stats {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 }
 
