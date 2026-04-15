@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X, ArrowRight } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="nav-contact" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
         <Link to="/booking" className="call-now-btn" style={{ padding: '0.65rem 1.15rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <span>Book Appointment</span>
-          <ArrowRight size={16} />
+          <ArrowUpRight size={16} />
         </Link>
       </div>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
           <Link to="/gallery" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
           <Link to="/booking" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
             <span>Book Appointment</span>
-            <ArrowRight size={16} />
+            <ArrowUpRight size={16} />
           </Link>
         </div>
       )}

@@ -11,7 +11,7 @@ const ScaleAndPolish = () => {
         <title>Scale & Polish | LifeDent</title>
         <meta name="description" content="Professional teeth cleaning, scale and polish services at LifeDent, Accra." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: 'var(--section-padding-desktop) 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page" style={{ padding: 'calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Scale & Polish</h1>
           <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Scale and Polish" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />

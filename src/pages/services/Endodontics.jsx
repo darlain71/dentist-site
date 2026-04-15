@@ -11,7 +11,7 @@ const Endodontics = () => {
         <title>Endodontics & Root Canal | LifeDent</title>
         <meta name="description" content="Expert endodontic treatments and painless root canal therapy at LifeDent, Accra." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: 'var(--section-padding-desktop) 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page" style={{ padding: 'calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Endodontics (Root Canal)</h1>
           <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Endodontics" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
