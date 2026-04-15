@@ -2429,6 +2429,11 @@ h6,
   margin: 0 auto;
 }
 
+.new-about-container .site-section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
 .new-about-header.site-section {
   padding-bottom: 0 !important;
 }
