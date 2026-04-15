@@ -138,11 +138,12 @@
   transform: translate(-50%, 0.25rem);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Russo+One&family=Sansita+Swashed:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  --font-heading: 'Courier Prime', monospace;
-  --font-body: 'Courier Prime', monospace;
+  --font-heading: 'Playfair', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Bad Script', cursive;
   --bg-color: #0b0f19;
   --text-main: #ffffff;
   --text-sub: rgba(255, 255, 255, 0.75);
