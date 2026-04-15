@@ -12,9 +12,9 @@ const Services = () => {
         <title>Our Services | LifeDent</title>
         <meta name="description" content="Comprehensive dental services in Accra: Check-ups, Teeth Whitening, Cavity Fillings, and more at LifeDent." />
       </Helmet>
-      <section className="new-about-header">
-        <h1 className="new-about-title">Services</h1>
-        <p className="new-about-desc">
+      <section className="new-about-header site-section">
+        <h1 className="section-title-universal">Services</h1>
+        <p className="section-desc-universal">
           We offer a full spectrum of dental services designed to keep your smile healthy and bright, 
           from routine checkups to specialized surgery. Our state-of-the-art facility is equipped 
           with the latest technology to ensure your treatments are as effective and pain-free as possible. 
@@ -22,48 +22,44 @@ const Services = () => {
         </p>
       </section>
 
-      <section className="services-section">
-        <div className="services-header">
-          <h2 className="services-title">Services We Provide</h2>
-        </div>
-
-        <div className="works-grid" style={{ marginTop: '1.5rem' }}>
+      <section className="services-section site-section">
+        <div className="works-grid">
           <div className="works-col-left">
-            <h2 className="works-title"></h2>
-            <p className="works-desc">We offer a full spectrum of dental services designed to keep your smile healthy and bright.</p>
+             <h2 className="section-title-universal">Dental Services</h2>
+             <p className="section-desc-universal">We offer a full spectrum of dental services designed to keep your smile healthy and bright.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid">
               <Link to="/services/check-up" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="work-card" style={{ cursor: 'pointer', transition: 'transform 0.2s ease', ':hover': { transform: 'translateY(-5px)' } }}>
+                <div className="work-card">
                   <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Check-Up" className="work-card-img" />
                   <h3 className="work-card-title">Comprehensive Check-Up</h3>
                   <p className="work-card-desc">Digital X-rays, exams, and personalized advice.</p>
                 </div>
               </Link>
               <Link to="/services/scale-and-polish" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="work-card" style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }}>
+                <div className="work-card">
                   <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Scale & Polish" className="work-card-img" />
                   <h3 className="work-card-title">Scale & Polish</h3>
                   <p className="work-card-desc">Deep cleaning to remove plaque and prevent disease.</p>
                 </div>
               </Link>
               <Link to="/services/teeth-whitening" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="work-card" style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }}>
+                <div className="work-card">
                   <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Teeth Whitening" className="work-card-img" />
                   <h3 className="work-card-title">Teeth Whitening</h3>
                   <p className="work-card-desc">Professional and safe whitening services.</p>
                 </div>
               </Link>
               <Link to="/services/cavity-filling" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="work-card" style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }}>
+                <div className="work-card">
                   <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Cavity Filling" className="work-card-img" />
                   <h3 className="work-card-title">Cavity Filling</h3>
                   <p className="work-card-desc">Painless restoration of decayed teeth.</p>
                 </div>
               </Link>
               <Link to="/services/endodontics" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="work-card" style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }}>
+                <div className="work-card">
                   <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Endodontics" className="work-card-img" />
                   <h3 className="work-card-title">Endodontics (Root Canal)</h3>
                   <p className="work-card-desc">Expert treatments to save infected teeth.</p>
@@ -73,10 +69,10 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="works-grid" style={{ marginTop: '6rem' }}>
+        <div className="works-grid" style={{ marginTop: 'var(--section-padding-desktop)' }}>
           <div className="works-col-left">
-            <h2 className="works-title">Our Specialists</h2>
-            <p className="works-desc">Meet our team of experienced dental professionals.</p>
+            <h2 className="section-title-universal">Our Specialists</h2>
+            <p className="section-desc-universal">Meet our team of experienced dental professionals.</p>
           </div>
           <div className="works-col-right">
             <div className="works-images-grid">
@@ -93,12 +89,12 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div style={{ textAlign: 'center', marginTop: '6rem', padding: '4rem 2rem', background: '#ffffff', borderRadius: '32px' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>Ready for a Brighter Smile?</h2>
-          <p style={{ color: '#666', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+        <div style={{ textAlign: 'center', marginTop: 'var(--section-padding-desktop)', padding: 'var(--section-padding-mobile)', background: '#ffffff', borderRadius: '32px' }}>
+          <h2 className="section-title-universal" style={{ margin: '0 auto var(--heading-p-gap-desktop)' }}>Ready for a Brighter Smile?</h2>
+          <p className="section-desc-universal" style={{ margin: '0 auto var(--p-content-gap-desktop)' }}>
             Book your consultation today and experience world-class dental care at LifeDent.
           </p>
-          <Link to="/booking" className="works-btn" style={{ textDecoration: 'none', margin: '0 auto' }}>
+          <Link to="/booking" className="section-btn-universal">
             <span>Book Appointment</span>
             <ArrowRight className="btn-icon" size={16} />
           </Link>
