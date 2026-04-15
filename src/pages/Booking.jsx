@@ -243,7 +243,7 @@ const Booking = () => {
   ];
 
   return (
-    <div className="booking-page-container">
+    <div className="new-about-container">
       <Helmet>
         <title>Make your Booking | LifeDent</title>
       </Helmet>
