@@ -3115,35 +3115,92 @@ img {
 
   .about-grid,
   .works-grid,
-  .services-grid {
+  .services-grid,
+  .new-about-header,
+  .new-about-mission-section,
+  .bento-grid,
+  .testimonials-main-layout {
     grid-template-columns: 1fr !important;
+    flex-direction: column !important;
     gap: 2.5rem !important;
+  }
+
+  .new-about-header {
+    gap: 1rem !important;
+  }
+
+  /* Testimonials mobile overhaul */
+  .testimonials-selector-area {
+    min-height: 150px !important;
+    margin-bottom: 2rem;
+  }
+
+  .curved-line-svg {
+    display: none;
+  }
+
+  .avatars-ring {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .avatar-item {
+    position: static !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: auto !important;
+  }
+
+  .avatar-info {
+    display: none; /* Hide names in the ring on mobile to save space */
+  }
+
+  .avatar-item.active .avatar-info {
+    display: none; /* Keep names hidden for cleaner mobile look, user sees quote below */
+  }
+
+  .testimonial-quote-area {
+    padding-left: 0 !important;
+  }
+
+  .main-quote-paragraph {
+    font-size: 1.1rem !important;
+  }
+
+  /* Bento Grid mobile scaling */
+  .bento-img-card {
+    height: 350px !important;
   }
 
   /* Universal section heading fix for mobile */
   .section-title-universal,
-  .about-title,
-  .works-title,
-  .testimonials-title,
+  .new-about-title,
+  .testimonials-title-modern,
   .product-heading {
     font-size: 2.25rem !important;
     margin-bottom: var(--heading-p-gap-mobile) !important;
   }
 
-  .trust-banner-inner {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+  .new-about-title {
+    font-size: 2.5rem !important;
   }
 
-  .footer-huge-text {
-    font-size: 14vw !important;
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem !important;
   }
 
-  .service-card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .hero-btn-black, .hero-btn-white {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
