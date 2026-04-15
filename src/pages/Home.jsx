@@ -143,11 +143,6 @@ const Home = () => {
              <div className="play-button">
                <div className="play-icon">▶</div>
              </div>
-             <div className="feature-tags">
-               <span>#ExpertCare</span>
-               <span>#ModernTech</span>
-               <span>#LifeDent</span>
-             </div>
           </div>
           <div className="feature-content">
             <h2 className="feature-title">Make Every Visit<br />Simple, Calm,<br />and Effective</h2>
@@ -156,9 +151,6 @@ const Home = () => {
               approach, painless solutions, and sustainable standards. Make small 
               changes today that create a lasting impact on your oral health.
             </p>
-            <Link to="/booking" className="feature-btn">
-              <span>Book Appointment</span>
-            </Link>
           </div>
         </div>
       </section>
