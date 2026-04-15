@@ -70,7 +70,7 @@ const Testimonials = () => {
                     <div className="avatar-info">
                       <h4 className="avatar-name">{t.author}</h4>
                       <div className="avatar-meta">
-                        <Star size={14} fill="#22c55e" stroke="none" />
+                        <Star size={14} fill="#1a1a1a" stroke="none" />
                         <span>{t.rating} on {t.date}</span>
                       </div>
                     </div>
