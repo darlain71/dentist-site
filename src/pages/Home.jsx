@@ -57,20 +57,20 @@ const Home = () => {
 
 
 
-      <section className="about-section" id="about">
+      <section className="about-section site-section" id="about">
         <div className="about-grid">
           <div className="about-col-left">
             <img src="/about_left.png" alt="Dental examination" className="about-img-left" />
           </div>
 
           <div className="about-col-center">
-            <h2 className="about-title">A Simple Way to Save<br />on Dental Care</h2>
-            <p className="about-desc">
-              Our team of skilled and experienced dental professionals strives<br />
-              to create comfortable and welcoming environment for each and<br />
+            <h2 className="section-title-universal">A Simple Way to Save<br />on Dental Care</h2>
+            <p className="section-desc-universal">
+              Our team of skilled and experienced dental professionals strives
+              to create comfortable and welcoming environment for each and
               every patient. We offer a wide range of services.
             </p>
-            <Link to="/booking" className="about-btn" style={{ textDecoration: 'none' }}>
+            <Link to="/booking" className="section-btn-universal">
               <span>Book Appointment</span>
               <ArrowRight className="btn-icon" size={16} />
             </Link>
@@ -89,13 +89,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="product-section" id="gallery" style={{ paddingBottom: '0' }}>
+      <section className="product-section site-section" id="gallery">
         <div className="product-container">
           <div className="product-info-left" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 className="product-heading" style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+            <h2 className="section-title-universal">
               Real Results, Real Smiles
             </h2>
-            <p className="product-subtext-left" style={{ color: '#666' }}>
+            <p className="section-desc-universal" style={{ margin: '0 auto' }}>
               See the difference our professional dental care makes. From teeth whitening to <br />
               complete smile makeovers, our results speak for themselves.
             </p>
@@ -124,8 +124,8 @@ const Home = () => {
             </div>
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-             <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '2rem' }}>
+          <div className="section-cta-container">
+             <Link to="/booking" className="section-btn-universal">
                 <span>Book Your Consultation</span>
                 <ArrowRight className="btn-icon" size={16} />
               </Link>
@@ -133,11 +133,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="works-section" id="services" style={{ paddingTop: '0' }}>
-        <div className="works-grid mobile-tight-grid">
+      <section className="works-section site-section" id="services">
+        <div className="works-grid">
           <div className="works-col-left">
             <div className="works-left-top">
-              <h2 className="works-title mobile-small-gap-title">Services We Provide<br />Are Listed Below</h2>
+              <h2 className="section-title-universal">Services We Provide<br />Are Listed Below</h2>
             </div>
 
             <div className="works-avatars-container desktop-only-avatars">
@@ -154,7 +154,7 @@ const Home = () => {
           </div>
 
           <div className="works-col-right">
-            <p className="works-desc mobile-small-gap-desc">
+            <p className="section-desc-universal">
               Our team of skilled and experienced dental<br />
               professionals strives to create comfortable and<br />
               welcoming environment for each.
@@ -171,7 +171,7 @@ const Home = () => {
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Dental Implant" className="work-card-img" />
                 <h3 className="work-card-title">Dental Implant</h3>
                 <p className="work-card-desc">Improve your smile with cleaning.</p>
-                <div className="works-avatars-container mobile-only-avatars" style={{ marginTop: '2rem' }}>
+                <div className="works-avatars-container mobile-only-avatars">
                   <div className="avatar-stack">
                     <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=150&q=80" alt="Happy member 1" className="avatar filled-avatar" />
                     <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Happy member 2" className="avatar filled-avatar" />
