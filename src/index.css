@@ -2421,7 +2421,7 @@ h6,
 .new-about-container {
   min-height: 100vh;
   background-color: #ffffff;
-  padding: 10rem 8% 6rem 8%;
+  padding: 4rem 8% var(--section-padding-desktop) 8%;
   color: #1a1a1a;
   max-width: 1400px;
   margin: 0 auto;
@@ -2431,8 +2431,8 @@ h6,
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 3rem;
-  gap: 4rem;
+  margin-bottom: 1rem;
+  gap: 2rem;
 }
 
 .new-about-title {
@@ -2452,7 +2452,7 @@ h6,
 }
 
 .new-about-image-section {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   width: 100%;
 }
 
