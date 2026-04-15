@@ -49,7 +49,6 @@ const Home = () => {
             </Link>
             <Link to="/services" className="hero-btn-white">
               <span>Services</span>
-              <ArrowUpRight size={20} />
             </Link>
           </div>
         </main>
