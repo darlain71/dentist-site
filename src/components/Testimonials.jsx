@@ -36,6 +36,10 @@ const Testimonials = () => {
     <section className="testimonials-modern site-section" id="testimonials">
       <div className="testimonials-container">
         <h2 className="testimonials-title-modern">Customer Reviews</h2>
+        <p className="section-desc-universal" style={{ marginBottom: '4rem', maxWidth: '600px' }}>
+          Discover why patients trust us with their smiles. Our commitment to comfort, 
+          technology, and personalized care ensures every visit is an exceptional experience.
+        </p>
 
         <div className="testimonials-main-layout">
           {/* Left Side: Curved Avatar Selector */}

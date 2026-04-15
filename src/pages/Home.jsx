@@ -259,27 +259,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="partner-section site-section">
-        <h2 className="section-title-universal" style={{ textAlign: 'center', margin: '0 auto var(--heading-p-gap-desktop)' }}>Our Trusted Partners</h2>
-        <p className="section-desc-universal" style={{ textAlign: 'center', margin: '0 auto var(--p-content-gap-desktop)' }}>
-          We collaborate with world-class dental brands to ensure you receive 
-          the highest quality materials and technology for your smile.
-        </p>
-        <div className="partner-marquee-container">
-          <div className="partner-marquee-track">
-            {[...partners, ...partners].map((partner, index) => (
-              <div 
-                key={`${partner.id}-${index}`} 
-                className="partner-card"
-              >
-                <img src={partner.logo} alt={partner.name} className="partner-logo" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Testimonials />
       <FAQ />
     </>
