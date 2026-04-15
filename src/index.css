@@ -1594,7 +1594,7 @@ h6,
 
 @media (max-width: 992px) {
   .testimonials-modern .section-desc-universal {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
   .testimonials-main-layout { flex-direction: column; gap: 0; align-items: center; }
   .testimonials-selector-area { 
