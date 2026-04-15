@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -7,8 +8,8 @@ const Endodontics = () => {
   return (
     <>
       <Helmet>
-        <title>Endodontics & Root Canal | Dental Signature GH</title>
-        <meta name="description" content="Expert endodontic treatments and painless root canal therapy at Dental Signature GH, Accra." />
+        <title>Endodontics & Root Canal | LifeDent</title>
+        <meta name="description" content="Expert endodontic treatments and painless root canal therapy at LifeDent, Accra." />
       </Helmet>
       <div className="service-detail-page" style={{ padding: '6rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -26,10 +27,10 @@ const Endodontics = () => {
             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}><CheckCircle2 size={18} color="#0b0f19" /> Swelling and tenderness in nearby gums</li>
           </ul>
 
-          <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
+          <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', marginBottom: '4rem' }}>
             <span>Consult Our Endodontist</span>
             <ArrowRight className="btn-icon" size={16} />
-          </a>
+          </Link>
         </div>
       </div>
       <FAQ />

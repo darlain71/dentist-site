@@ -41,8 +41,8 @@ const About = () => {
   return (
     <div className="new-about-container">
       <Helmet>
-        <title>About Us | Dental Signature GH</title>
-        <meta name="description" content="Meet Dr. Kofi Ansah and Dr. Kojo Nti at Dental Signature GH. We provide top-tier dental care in East Legon and Oyarifa." />
+        <title>About Us | LifeDent</title>
+        <meta name="description" content="Meet Dr. Kofi Ansah and Dr. Kojo Nti at LifeDent. We provide top-tier dental care in East Legon and Oyarifa." />
       </Helmet>
       {/* Top Header Section */}
       <section className="new-about-header">

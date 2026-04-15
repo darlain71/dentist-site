@@ -9,8 +9,8 @@ const Services = () => {
   return (
     <div className="new-about-container">
       <Helmet>
-        <title>Our Services | Dental Signature GH</title>
-        <meta name="description" content="Comprehensive dental services in Accra: Check-ups, Teeth Whitening, Cavity Fillings, and more at Dental Signature GH." />
+        <title>Our Services | LifeDent</title>
+        <meta name="description" content="Comprehensive dental services in Accra: Check-ups, Teeth Whitening, Cavity Fillings, and more at LifeDent." />
       </Helmet>
       <section className="new-about-header">
         <h1 className="new-about-title">Services</h1>

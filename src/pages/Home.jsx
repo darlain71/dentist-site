@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Dental Signature GH | Best Dentist in East Legon Accra</title>
+        <title>LifeDent | Best Dentist in East Legon Accra</title>
         <meta name="description" content="Friendly, professional, and affordable dental care in East Legon and Oyarifa, Accra. Book an appointment today!" />
       </Helmet>
       <div className="hero-section" id="home">
@@ -70,10 +70,10 @@ const Home = () => {
               to create comfortable and welcoming environment for each and<br />
               every patient. We offer a wide range of services.
             </p>
-            <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none' }}>
+            <Link to="/booking" className="about-btn" style={{ textDecoration: 'none' }}>
               <span>Book Appointment</span>
               <ArrowRight className="btn-icon" size={16} />
-            </a>
+            </Link>
             <div className="about-img-center-wrapper">
               <img src="/about_center.png" alt="Dental procedure close-up" className="about-img-center" />
             </div>
@@ -125,10 +125,10 @@ const Home = () => {
           </div>
           
           <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-             <a href="tel:0535516633" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+             <Link to="/booking" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
                 <span>Book Your Consultation</span>
                 <ArrowRight className="btn-icon" size={16} />
-              </a>
+              </Link>
           </div>
         </div>
       </section>
