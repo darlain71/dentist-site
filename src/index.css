@@ -678,14 +678,14 @@ h6,
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 10vw, 3.5rem);
+    font-size: clamp(1.6rem, 10vw, 3.8rem);
     margin-bottom: 0.5rem;
     color: #ffffff !important;
     line-height: 1.05;
   }
   
   .title-row {
-    white-space: normal;
+    white-space: nowrap;
     display: block;
   }
 
