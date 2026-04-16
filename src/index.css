@@ -639,9 +639,13 @@ h6,
   }
   
   .hero-btn-black, .hero-btn-white {
-    padding: 0.75rem 1.25rem;
+    flex: 1;
+    padding: 0.75rem 0.75rem;
     font-size: 0.85rem;
     white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    min-width: 0;
   }
   
   .hero-btn-white {
@@ -3206,6 +3210,20 @@ img {
     border: none;
     padding: 1rem;
     font-size: 1.1rem;
+  }
+
+  .mobile-book-link {
+    font-size: 1.5rem !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    opacity: 0.9 !important;
+    background: none !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 1.5rem !important;
+    display: block !important;
+    width: auto !important;
   }
 
   @keyframes slideDown {

@@ -56,10 +56,7 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/gallery" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-          <Link to="/booking" className="call-now-btn" onClick={() => setIsMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-            <span>Book Appointment</span>
-            <ArrowUpRight size={16} />
-          </Link>
+          <Link to="/booking" className="nav-link mobile-book-link" onClick={() => setIsMobileMenuOpen(false)}>Book Appointment</Link>
         </div>
       )}
     </header>
