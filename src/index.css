@@ -3109,6 +3109,7 @@ h6,
   /* Reset stats to be easier to read instead of floating right */
   .about-col-right {
     flex-direction: column-reverse;
+    gap: 3rem;
   }
 }
 
