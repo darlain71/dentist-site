@@ -145,6 +145,11 @@ const Home = () => {
           <div className="works-col-left">
             <div className="works-left-top">
               <h2 className="section-title-universal">Services We Provide<br />Are Listed Below</h2>
+              <p className="section-desc-universal">
+                Our team of skilled and experienced dental<br />
+                professionals strives to create comfortable and<br />
+                welcoming environment for each.
+              </p>
             </div>
 
             <div className="works-avatars-container desktop-only-avatars">
@@ -161,12 +166,6 @@ const Home = () => {
           </div>
 
           <div className="works-col-right">
-            <p className="section-desc-universal">
-              Our team of skilled and experienced dental<br />
-              professionals strives to create comfortable and<br />
-              welcoming environment for each.
-            </p>
-
             <div className="works-images-grid">
               <div className="work-card">
                 <img src="/works_img1.png" alt="Teeth Straightening" className="work-card-img" />
