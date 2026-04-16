@@ -3089,6 +3089,10 @@ h6,
     text-align: center;
   }
 
+  .stats-text {
+    margin: 0 auto;
+  }
+
   .about-col-left {
     display: flex;
     justify-content: center;
