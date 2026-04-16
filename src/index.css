@@ -599,7 +599,12 @@ h6,
   }
 
   .hero-background::after {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 5%, rgba(255, 255, 255, 0) 8%);
+    background: linear-gradient(
+      to top,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.85) 12%,
+      rgba(255, 255, 255, 0) 30%
+    );
   }
 
   .hero-section {
@@ -633,23 +638,25 @@ h6,
     justify-content: center;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
   
   .hero-btn-black, .hero-btn-white {
-    flex: 1;
-    padding: 0.75rem 0.75rem;
-    font-size: 0.85rem;
-    white-space: nowrap;
+    width: 100%;
+    max-width: 280px;
+    padding: 0.85rem 1rem;
+    font-size: 0.92rem;
     text-align: center;
     justify-content: center;
-    min-width: 0;
   }
   
   .hero-btn-white {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
   }
 
   .hero-cards {
@@ -3222,7 +3229,9 @@ img {
     border: none !important;
     padding: 0.5rem 1rem !important;
     border-radius: 1.5rem !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
     width: auto !important;
   }
 
