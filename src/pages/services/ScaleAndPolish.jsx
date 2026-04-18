@@ -11,9 +11,9 @@ const ScaleAndPolish = () => {
         <title>Scale & Polish | LifeDent</title>
         <meta name="description" content="Professional teeth cleaning, scale and polish services at LifeDent, Accra." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: 'calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page">
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Scale & Polish</h1>
+          <h1 className="service-page-title">Scale & Polish</h1>
           <img src="https://images.pexels.com/photos/3845980/pexels-photo-3845980.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Scale and Polish" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
           <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#444', marginBottom: '2rem' }}>
             A scale and polish cleans your teeth thoroughly to remove built-up plaque and tartar. This not only keeps your teeth clean and bright but helps prevent gum disease.

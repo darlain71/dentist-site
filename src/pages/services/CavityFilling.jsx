@@ -11,9 +11,9 @@ const CavityFilling = () => {
         <title>Cavity Filling | LifeDent</title>
         <meta name="description" content="Painless cavity fillings at LifeDent. Restore your tooth's structure and prevent further decay." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: 'calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page">
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Cavity Filling</h1>
+          <h1 className="service-page-title">Cavity Filling</h1>
           <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Cavity Filling" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
           <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#444', marginBottom: '2rem' }}>
             A cavity filling restores a tooth damaged by decay back to its normal function and shape. Our modern fillings match the natural color of your teeth, ensuring a seamless and fully functional smile.

@@ -11,9 +11,9 @@ const TeethWhitening = () => {
         <title>Professional Teeth Whitening | LifeDent</title>
         <meta name="description" content="Brighten your smile with professional teeth whitening services at LifeDent, East Legon and Oyarifa." />
       </Helmet>
-      <div className="service-detail-page" style={{ padding: 'calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%', backgroundColor: '#fff', color: '#1a1a1a', minHeight: '80vh' }}>
+      <div className="service-detail-page">
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Professional Teeth Whitening</h1>
+          <h1 className="service-page-title">Professional Teeth Whitening</h1>
           <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Teeth Whitening" style={{ width: '100%', borderRadius: '16px', marginBottom: '2rem' }} />
           <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#444', marginBottom: '2rem' }}>
             Achieve a dazzling, confident smile with our professional teeth whitening solutions. Our safe, effective treatments can lighten your teeth by several shades in just one visit.

@@ -184,6 +184,32 @@ body {
   }
 }
 
+/* Service Detail Pages */
+.service-detail-page {
+  padding: calc(var(--section-padding-desktop) + 6rem) 5% 4rem 5%;
+  background-color: #fff;
+  color: #1a1a1a;
+  min-height: 80vh;
+}
+
+.service-page-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 900px) {
+  .service-detail-page {
+    padding: calc(var(--section-padding-mobile) + 5rem) 5% 3rem 5%;
+  }
+  
+  .service-page-title {
+    font-size: 2.22rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 .section-title-universal {
   font-size: 3.5rem;
   font-weight: 500;
